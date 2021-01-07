@@ -12,16 +12,17 @@ import pic6 from './imgs/galery6.jpg'
 
 function App() {
   return (
-    <div className="small-images">
-          <div className="row d-flex">
-        <img src={pic1} className='img-footer' alt="logo" />
-        <img src={pic2} className='img-footer' alt="logo" />
-        <img src={pic3} className='img-footer' alt="logo" />
-        <img src={pic4} className='img-footer' alt="logo" />
-        <img src={pic5} className='img-footer' alt="logo" />
-        <img src={pic6} className='img-footer' alt="logo" />
+    <div className="images-row">
+    <ul className="small-images">   
+        <li><img src={pic1} className='img-footer' alt="logo" /></li> 
+        <li><img src={pic2} className='img-footer' alt="logo" /></li>   
+        <li><img src={pic3} className='img-footer' alt="logo" /></li>   
+        <li><img src={pic4} className='img-footer' alt="logo" /></li>   
+        <li><img src={pic5} className='img-footer' alt="logo" /></li>   
+        <li><img src={pic6} className='img-footer' alt="logo" /></li>     
+    </ul>
     </div>
-    </div>
+    
 
   );
 }

@@ -1,4 +1,21 @@
-.img-footer{
-    height: 100px;
+.small-images{
+    padding-left: 0;
+    display: flex;
+    flex-wrap: row nowrap;
+    height: auto;
+    overflow: hidden;
+    border: 3px black solid;
+    width: auto;
+}
+
+img{ 
+    max-height: 200px;
+    width: 100%;
+}
+
+li{
+    list-style-type: none;
+    flex: 1;
+
 }
 
