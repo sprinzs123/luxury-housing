@@ -1,4 +1,42 @@
+body{
+  font-family: "Montserrat",sans-serif;
+}
+
+
+:root{
+  --mainGreen: #7cdc66;
+  --greyLight: #3a3947;
+  --greyDark: #2f2e3d;
+
+}
+
+.green{
+  color: var(--mainGreen);
+}
+
+.btn-green{
+  background-color: var(--mainGreen);
+  color: #fff;
+  padding: 10px;
+  margin: 10px;
+  margin-left: 0;
+  
+}
+
+.btn-green:hover{
+  cursor: pointer;
+  background-color: rgb(95, 189, 0);
+}
+
 .container{
   width: 85%;
   margin: auto;
+}
+
+.grey-1{
+  background-color: var(--greyLight);
+}
+
+.grey-2{
+  background-color: var(--greyDark);
 }

@@ -1,0 +1,35 @@
+.smaller-footer{
+    padding-top: 3em;
+    padding-bottom: 2em;
+}
+
+
+
+.text-grey{
+    color: rgba(255,255,255,0.5);
+}
+
+.footer-bigger{
+    padding-bottom: 3em;
+    padding-top: 3em;
+}
+
+.footer-icons svg, b{
+    margin-right: 10px;
+}
+
+.footer-icons svg, b :hover{
+    cursor: pointer;
+}
+
+.rotate-icon:hover{
+    transform: rotate(20deg);
+}
+
+ul{
+    padding-left: 15px;
+}
+
+.small-text{
+    font-size: 12px;
+}
