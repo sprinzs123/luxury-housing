@@ -20,7 +20,7 @@ body{
   padding: 10px;
   margin: 10px;
   margin-left: 0;
-  
+  display: inline;
 }
 
 .btn-green:hover{
