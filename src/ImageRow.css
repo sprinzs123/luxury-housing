@@ -1,5 +1,6 @@
 .small-images{
     padding-left: 0;
+    margin: 0;
     display: flex;
     flex-wrap: row nowrap;
     height: auto;
@@ -15,6 +16,14 @@ img{
 li{
     list-style-type: none;
     flex: 1;
-
 }
 
+.img-footer{
+    transition: transform .2s;
+    margin: 0 auto;
+}
+
+.img-footer:hover{
+    transform: scale(1.5);
+    cursor: pointer;
+}

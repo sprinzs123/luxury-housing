@@ -1,0 +1,38 @@
+nav{
+    background-image: url('./imgs/navBanner.jpg');
+    background-size: cover;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 1em;
+    padding-right: 1em;
+    border: 1px solid white;
+    height: 15em;
+    align-items: center;
+
+}
+
+
+
+.nav-items{
+    flex: 8;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.nav-links{
+    display: flex;
+}
+
+.nav-links > li{
+    margin-right: 1em;
+}
+
+.nav-btn{
+    display: flex;
+}
+
+.nav-toggle{
+    flex: 2;
+}

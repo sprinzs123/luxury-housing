@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import ImageRow from './ImageRow';
 import Footer from './Footer'
-
+import NavBar from './NavBar'
 
 ReactDOM.render(
 <div>
@@ -16,5 +16,14 @@ ReactDOM.render(
     <Footer />
   </div>,
       document.getElementById('footer')
+
+);
+
+
+ReactDOM.render(
+  <div>
+    <NavBar />
+  </div>,
+      document.getElementById('nav-bar')
 
 );
