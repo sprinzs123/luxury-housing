@@ -7,12 +7,16 @@ class ShowNav extends Component{
     constructor(){
         super()
         this.state = {
-            showModal: false
+            showModal: false,
+            toggleButton : 'X'
         }
     }   
 
-    changeView(){
-        console.log('state.showModal')
+    changeView =() => {
+        this.setState({
+            toggleButton: 'Y'
+        })
+        console.log(this.state.toggleButton)
     }
 
 
@@ -32,7 +36,7 @@ class ShowNav extends Component{
             <div className="nav-toggle">
                 <ul className="nav-btn">
                     <li>LEASE NOW</li>
-                    <li onClick={this.changeView} className='toggle-btn'>X</li>
+                    <li onClick={this.changeView} className='toggle-btn'>{ this.state.toggleButton }</li>
                 </ul>
             </div>
         </nav>
