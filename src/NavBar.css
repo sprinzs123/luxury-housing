@@ -6,8 +6,8 @@ nav{
     justify-content: space-between;
     padding-left: 1em;
     padding-right: 1em;
-    border: 1px solid white;
-    height: 15em;
+    border-bottom: 1px solid white;
+    height: 15vh;
     align-items: center;
 
 }
@@ -31,8 +31,39 @@ nav{
 
 .nav-btn{
     display: flex;
+
 }
 
 .nav-toggle{
     flex: 2;
+    border-left: 1px white solid;
+
 }
+
+
+.nav-modal-flex{
+    height: 85vh;
+    background-color: #2f2e3d;
+    color: white; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.modal-text > li{
+    font-size: 30px;
+    text-align: center;
+}
+
+.modal-text > li:hover{
+    color:  #7cdc66
+}
+
+
+.nav-modal{
+    overflow: hidden;
+    display: none;
+}
+
