@@ -18,10 +18,14 @@ body{
   background-color: var(--mainGreen);
   color: #fff;
   padding: 10px;
-  margin: 10px;
+  margin: 0.3em;
   margin-left: 0;
   display: inline;
 }
+
+/* .btn-parent{
+  margin-top: 1.5em;
+} */
 
 .btn-green:hover{
   cursor: pointer;
@@ -39,4 +43,26 @@ body{
 
 .grey-2{
   background-color: var(--greyDark);
+}
+
+.btn-row{
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+@media(max-width: 780px){
+    .btn-row{
+      display: block ;
+    }
+
+    .btn-parent{
+      display: flex;
+    }
+
+    .btn-green{
+      flex: 1;
+      text-align: center;
+    }
+
+
 }
