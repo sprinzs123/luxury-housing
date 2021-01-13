@@ -4,6 +4,7 @@ import ImageRow from './ImageRow';
 import Footer from './Footer'
 import NavBar from './NavBar'
 import AboutUs from './AboutUs'
+import ContactUs from './ContatcUs'
 
 ReactDOM.render(
 <div>
@@ -17,7 +18,6 @@ ReactDOM.render(
     <Footer />
   </div>,
       document.getElementById('footer')
-
 );
 
 
@@ -26,7 +26,6 @@ ReactDOM.render(
     <NavBar />
   </div>,
       document.getElementById('nav-bar')
-
 );
 
 
@@ -35,5 +34,13 @@ ReactDOM.render(
     <AboutUs />
   </div>,
       document.getElementById('about')
+);
+
+
+ReactDOM.render(
+  <div>
+    <ContactUs />
+  </div>,
+      document.getElementById('contact')
 
 );

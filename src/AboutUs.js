@@ -29,7 +29,6 @@ class AboutUs extends Component {
                             <div className='welcome-btns btn-row'>
                                 <div className='btn-parent'>
                                     <div className='btn-green'>VIEW AMENITIES</div>
-
                                 </div>
                                 <div className='btn-parent'>
                                     <div className='btn-green'>EXPLORE THE NEIGHBORHOOD</div>

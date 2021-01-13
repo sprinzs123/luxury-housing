@@ -10,6 +10,12 @@ body{
 
 }
 
+.small-text{
+  font-size: 12px;
+  flex-wrap: nowrap;
+
+}
+
 .green{
   color: var(--mainGreen);
 }
@@ -22,10 +28,6 @@ body{
   margin-left: 0;
   display: inline;
 }
-
-/* .btn-parent{
-  margin-top: 1.5em;
-} */
 
 .btn-green:hover{
   cursor: pointer;
