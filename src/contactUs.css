@@ -1,0 +1,33 @@
+.contact-form{
+    background-color: #f7f7f7;
+    padding-top: 2.5em;
+    padding-bottom: 2em;
+}
+
+.form-row{
+    position: relative;
+    flex: 1;
+}
+
+.input-label{
+    position: absolute;
+    top: 25%;
+    left: 3%;
+}
+
+.form-input{
+    border-radius: 0px;
+    border: 1px solid #c5c5c5;
+    height: 3em;
+    width: 100%;
+    background-color: white;
+}
+
+.form-input:hover{
+    cursor: pointer;
+}
+
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
