@@ -7,6 +7,9 @@ class ContactForm extends Component {
         super()
         this.state = {
             error: "",
+            firstName : '',
+            lastName : '',
+            email : '',
             inputLabel1: [{ 'label': 'First Name', 'Id': 'first' }, { 'label': 'Last Name', 'Id': 'last' }],
             inputLabel2: [{ 'label': 'Phone', 'Id': 'phone' }, { 'label': 'Email', 'Id': 'email' }],
             floorPlan: ['Studio Bed/1 bath', '1 Bed/1 bath', '2 Bed/1 bath', '3 Bed/1 bath', '4 Bed/2 bath']
@@ -15,8 +18,8 @@ class ContactForm extends Component {
 
     firstRow() {
         return this.state.inputLabel1.map(input =>
-            <div className='col-sm-6'>
-                <div key={input.label} className='form-row'>
+            <div key={input.label} className='col-sm-6'>
+                <div className='form-row'>
                     <label className='input-label'>{input.label}</label>
                     <input className='form-input' id={input.id}></input>
                 </div>
@@ -26,8 +29,8 @@ class ContactForm extends Component {
 
     secondRow() {
         return this.state.inputLabel2.map(input =>
-            <div className='col-sm-6'>
-                <div key={input.label} className='form-row'>
+            <div key={input.label} className='col-sm-6'>
+                <div  className='form-row'>
                     <label className='input-label'>{input.label}</label>
                     <input className='form-input' id={input.id}></input>
                 </div>
@@ -35,11 +38,29 @@ class ContactForm extends Component {
         )
     }
 
+    checkForErrors(){
+        console.log('here')
+    }
+
+
+    submitForm = (e) => {
+        e.preventDefault()
+        const errors = this.checkForErrors()
+        if (!errors){
+            this.setState({
+                error: ""
+            })            
+        }
+    }
+
 
     render() {
         return (
             <div className='contact-form'>
+                <form>
                 <div className='container'>
+                <h3 className='text-danger'>{this.state.error}</h3>
+
                     <div className='input-row row d-flex'>
                         {this.firstRow()}
                     </div>
@@ -71,10 +92,10 @@ class ContactForm extends Component {
                         <textarea id='comments' className=' col-12 question'></textarea>
                     </div>
                     <div className='d-flex justify-content-center'>
-                        <button className='btn-green'>SUBMIT FORM</button>
+                        <button onClick={this.submitForm} className='btn-green'>SUBMIT FORM</button>
                     </div>
                 </div>
-
+                </form>
             </div>
 
         )

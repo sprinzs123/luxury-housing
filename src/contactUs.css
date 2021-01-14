@@ -22,14 +22,13 @@
     height: 3em;
     width: 100%;
     background-color: white;
-}
-
-.form-input:hover{
-    cursor: pointer;
+    padding-left: 20px;
 }
 
 .dropdown{
     padding-left: 10px;
+    color: rgb(95, 95, 95);
+
 }
 
 .large-area{
@@ -38,4 +37,18 @@
     position: relative;
 }
 
+.dropdown>option{
+    color: rgb(95, 95, 95);
+}
 
+.form-row>label{
+    color: rgb(95, 95, 95);
+}
+
+.form-input:active{
+    border: 1px solid #83d4b6;
+}
+
+.form-input:active> .input-label{
+   color: red;
+}
