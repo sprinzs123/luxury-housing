@@ -7,12 +7,13 @@
 .form-row{
     position: relative;
     flex: 1;
+    padding-bottom: 1em;
 }
 
 .input-label{
     position: absolute;
-    top: 25%;
-    left: 3%;
+    top: 15%;
+    left: 5%;
 }
 
 .form-input{
@@ -28,6 +29,13 @@
 }
 
 .dropdown{
-    position: relative;
-    display: inline-block;
+    padding-left: 10px;
 }
+
+.large-area{
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+}
+
+

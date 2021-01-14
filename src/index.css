@@ -27,6 +27,7 @@ body{
   margin: 0.3em;
   margin-left: 0;
   display: inline;
+  border: 0
 }
 
 .btn-green:hover{

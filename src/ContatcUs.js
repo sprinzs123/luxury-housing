@@ -15,7 +15,7 @@ class ContactForm extends Component {
 
     firstRow() {
         return this.state.inputLabel1.map(input =>
-            <div className='col-6'>
+            <div className='col-sm-6'>
                 <div key={input.label} className='form-row'>
                     <label className='input-label'>{input.label}</label>
                     <input className='form-input' id={input.id}></input>
@@ -26,7 +26,7 @@ class ContactForm extends Component {
 
     secondRow() {
         return this.state.inputLabel2.map(input =>
-            <div className='col-6'>
+            <div className='col-sm-6'>
                 <div key={input.label} className='form-row'>
                     <label className='input-label'>{input.label}</label>
                     <input className='form-input' id={input.id}></input>
@@ -40,24 +40,41 @@ class ContactForm extends Component {
         return (
             <div className='contact-form'>
                 <div className='container'>
-                    <div className='input-row row d-flex pb-3'>
+                    <div className='input-row row d-flex'>
                         {this.firstRow()}
                     </div>
-                    <div className='input-row row d-flex pb-3'>
+                    <div className='input-row row d-flex'>
                         {this.secondRow()}
                     </div>
-                    <div className='input-row row d-flex pb-3'>
-                        <div className='col-6'>
+                    <div className='input-row row d-flex'>
+                        <div className='col-sm-6'>
                             <div className='form-row'>
                                 <label className='input-label'>Select a Floorplan</label>
-                                <div className='form-input dropdown' id='floor'>
-               
-                                </div>
-
+                                <select className='form-input dropdown' id='floor'>
+                                    <option>Select a Floorplan</option>
+                                    <option>Studio/1 Bath</option>
+                                    <option>1 Bed/1 Bath</option>
+                                    <option>2 Bed/1 Bath</option>
+                                    <option>3 Bed/2 Bath</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div className='col-sm-6'>
+                            <div className='form-row'>
+                                <label className='input-label'>Desired Move-in Date</label>
+                                <input className='form-input' id='move'></input>
                             </div>
                         </div>
                     </div>
+                    <div className='large-area row mb-3'>
+                        <label className='input-label'>Desired Move-in Date</label>
+                        <textarea id='comments' className=' col-12 question'></textarea>
+                    </div>
+                    <div className='d-flex justify-content-center'>
+                        <button className='btn-green'>SUBMIT FORM</button>
+                    </div>
                 </div>
+
             </div>
 
         )
