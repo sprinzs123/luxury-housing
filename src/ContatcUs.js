@@ -25,6 +25,7 @@ class ContactForm extends Component {
 		};
 	}
 
+    // make label disappear when start typing
 	changeFirst = (e) => {
 		const newValue = e.target.value;
 		this.setState({
@@ -105,21 +106,40 @@ class ContactForm extends Component {
 		}
 	};
 
+    // for validation return list of errors found that is going to be updated to state
 	checkForErrors = () => {
         let errors = []
         if(!this.state.firstName){
             errors.push('Invalid Name')
         }
 
+        if(!this.state.lastName){
+            errors.push('Invalid Last Name')
+        }
 
+        if(!this.state.email.includes('@')){
+            errors.push('Invalid Email')
+        }
 
+        if(!this.state.phone){
+            errors.push('Invalid Phone Number')
+        }
         return errors
-	}
+    }
+    
+        showErrors = () => {
+        return this.state.error.map(error => 
+            <li className='text-danger'>{error}</li>
+            )
+    }
+
 
 	submitForm = (e) => {
         e.preventDefault();
         let foundErrors = this.checkForErrors()     
-        console.log(foundErrors)  
+        this.setState({
+            error : foundErrors
+        })
 	};
 
 	render() {
@@ -127,8 +147,9 @@ class ContactForm extends Component {
 			<div className="contact-form">
 				<form>
 					<div className="container">
-						<h3 className="text-danger">{this.state.error}</h3>
-
+                        <ul className="pl-0">
+                            {this.showErrors()}
+                        </ul>
 						<div className="input-row row d-flex">
 							<div className="col-sm-6">
 								<div className="form-row">
