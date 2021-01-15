@@ -43,12 +43,18 @@
 
 .form-row>label{
     color: rgb(95, 95, 95);
+
 }
 
-.form-input:active{
+.form-input:focus{
     border: 1px solid #83d4b6;
 }
 
-.form-input:active> .input-label{
-   color: red;
+
+textarea:focus{
+    border: 1px solid #83d4b6;
+}
+
+textarea{
+    height: 15em;
 }
