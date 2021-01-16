@@ -1,0 +1,11 @@
+.show-amenities{
+    border: 1px solid black;
+}
+
+.hidden-amenities{
+    background-color: #add8e6;
+    height: 0px;
+    overflow: hidden;
+
+}
+

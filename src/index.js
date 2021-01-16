@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ImageRow from './ImageRow';
-import Footer from './Footer'
-import NavBar from './NavBar'
-import AboutUs from './AboutUs'
-import ContactUs from './ContatcUs'
+import Footer from './Footer';
+import NavBar from './NavBar';
+import AboutUs from './AboutUs';
+import ContactUs from './ContatcUs';
+import Amenities from './Amenities';
 
 ReactDOM.render(
 <div>
@@ -39,7 +40,7 @@ ReactDOM.render(
 
 ReactDOM.render(
   <div>
-    <ContactUs />
+    <Amenities />
   </div>,
       document.getElementById('contact')
 

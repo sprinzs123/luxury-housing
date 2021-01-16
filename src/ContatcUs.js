@@ -106,6 +106,10 @@ class ContactForm extends Component {
 		}
 	};
 
+	selectPlan = (e) => {
+		console.log(e)
+	}
+
     // for validation return list of errors found that is going to be updated to state
 	checkForErrors = () => {
         let errors = []
@@ -234,8 +238,7 @@ class ContactForm extends Component {
 									</label>
 									<select
 										className="form-input dropdown"
-										id="floor"
-									>
+										id="floor"									>
 										<option>Select a Floorplan</option>
 										<option>Studio/1 Bath</option>
 										<option>1 Bed/1 Bath</option>
