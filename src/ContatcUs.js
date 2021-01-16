@@ -45,7 +45,7 @@ class ContactForm extends Component {
 	changeLast = (e) => {
 		const newValue = e.target.value;
 		this.setState({
-			firstName: newValue,
+			lastName: newValue,
 		});
 		if (newValue.length > 0) {
 			this.setState({
@@ -61,7 +61,7 @@ class ContactForm extends Component {
 	changePhone = (e) => {
 		const newValue = e.target.value;
 		this.setState({
-			firstName: newValue,
+			phone: newValue,
 		});
 		if (newValue.length > 0) {
 			this.setState({
@@ -77,7 +77,7 @@ class ContactForm extends Component {
 	changeEmail = (e) => {
 		const newValue = e.target.value;
 		this.setState({
-			firstName: newValue,
+			email: newValue,
 		});
 		if (newValue.length > 0) {
 			this.setState({
@@ -93,7 +93,7 @@ class ContactForm extends Component {
 	changeDate = (e) => {
 		const newValue = e.target.value;
 		this.setState({
-			firstName: newValue,
+			date: newValue,
 		});
 		if (newValue.length > 0) {
 			this.setState({
@@ -128,10 +128,15 @@ class ContactForm extends Component {
     }
     
         showErrors = () => {
-        return this.state.error.map(error => 
-            <li className='text-danger'>{error}</li>
+		if(this.state.error.length !=0){
+			        return this.state.error.map(error => 
+            <li key={error} className='text-danger'>{error}</li>
             )
-    }
+		}
+
+	}
+	
+
 
 
 	submitForm = (e) => {
@@ -139,7 +144,23 @@ class ContactForm extends Component {
         let foundErrors = this.checkForErrors()     
         this.setState({
             error : foundErrors
-        })
+		})
+		if(foundErrors.length == 0){
+			this.setState({
+				firstLabel: "First Name",
+				lastLabel: "Last Name",
+				phoneLabel: "Phone",
+				emailLabel: "Email",
+				dateLabel: "Desired Move-in Date",
+			})
+			let allInputs = document.querySelectorAll('input')
+			allInputs.forEach((input) => {
+				input.value = ''
+			})
+			let textArea = document.querySelector('textarea')
+			textArea.value = ''
+
+		}
 	};
 
 	render() {
@@ -147,9 +168,12 @@ class ContactForm extends Component {
 			<div className="contact-form">
 				<form>
 					<div className="container">
-                        <ul className="pl-0">
+						<div className='form-messages'>
+						<ul className=" error-message pl-0">
                             {this.showErrors()}
                         </ul>
+						</div>
+
 						<div className="input-row row d-flex">
 							<div className="col-sm-6">
 								<div className="form-row">
