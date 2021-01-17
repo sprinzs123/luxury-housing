@@ -1,6 +1,9 @@
 import "./amenities.css";
 import React, { Component } from "react";
 import pic1 from "./imgs/galery2.jpg";
+import pic2 from "./imgs/galery3.jpg";
+
+
 
 export default class Amenities extends Component {
 	constructor(props) {
@@ -103,13 +106,14 @@ export default class Amenities extends Component {
 						</button>
 					</div>
 				</div>
+				{/* new amenities */}
 				<div className="all-amenities">
 					<div className="show-amenities-pic">
-						<div className="amenities-header">
-							<div className="amenity-img">
-								<img src={pic1} alt="img" />
+						<div className="amenities-header-two">
+							<div className="amenity-img pl-3">
+								<img src={pic2} alt="img" />
 							</div>
-							<div className="amenity-text second-item">
+							<div className="amenity-text-two second-item">
 								<h3 className="green">Apartment Amenities</h3>
 							</div>
 						</div>
