@@ -6,29 +6,43 @@ export default class Amenities extends Component {
         super(props)        
         this.state = {
              hidden : true,
-             btnOne: 'showMore'
+             btnOne: 'show more'
         }
     }
     
-    render() {
+    btnToggle = () => {
+        let hiddenMenu = document.querySelector('.hidden-amenities')
+        if(this.state.btnOne === 'show more'){
+            hiddenMenu.classList.toggle('height-0')
+            this.setState({
+                btnOne : 'show less'
+            })
 
-        
+        } else {
+            hiddenMenu.classList.toggle('height-0')
+            this.setState({
+                btnOne : 'show more'
+            })
+        }
+    }
+
+    render() {
         return (
             <div className='container'>
                 <div className='all-amenities'>
                     <div className='show-amenities'>
-                        <ul>
+                        <ul className='hide'>
                             <li>Test</li>
                             <li>test2</li>
                         </ul>
                     </div>
-                    <div className='hidden-amenities'>
+                    <div className='hidden-amenities height-0'>
                         <ul>
                             <li>hidden</li>
                             <li>hidden2</li>
                         </ul>
                     </div>
-                    <button className='mt-4'>{this.state.btnOne}</button>
+                    <button onClick={this.btnToggle} className='mt-4'>{this.state.btnOne}</button>
                 </div>
             </div>
         )
