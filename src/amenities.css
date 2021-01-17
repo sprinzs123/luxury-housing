@@ -1,14 +1,12 @@
 .show-amenities{
-    border: 1px solid black;
     overflow: hidden;
 }
 
 .hidden-amenities{
-    background-color: #add8e6;
     overflow: hidden;
     animation: all ease-in-out 1s;
     transition: all 1s ease-out;
-    height: 10em;
+    height: 17em;
 }
 
 .height-0{
@@ -19,4 +17,46 @@
 
 .hide{
     overflow: hidden;
+}
+.amenities-items{
+    margin-bottom: 0;
+}
+
+
+.first-item, .second-item{
+    border-bottom: 1px solid #c5c5c5;
+    text-align: left;
+}
+
+.first-item{
+    border-right: 1px solid #c5c5c5;
+}
+
+
+
+
+.amenities-items{
+    column-count: 2;
+    column-gap: 0px;
+
+
+    
+} 
+
+@media(max-width:780px){
+    .amenities-items{
+        column-count: 1;
+    } 
+
+    .first-item{
+        border-right: none;
+    }
+}
+
+.amenities-items>li{
+    padding: 1.2em;
+    padding-left: 2em;
+    padding-right: 2em;
+    color: rgb(95, 95, 95);
+    width: 100%;
 }
