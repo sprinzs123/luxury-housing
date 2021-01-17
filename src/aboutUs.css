@@ -6,3 +6,15 @@
 .expand{
     color: #7cdc66;
 }
+.expand-text-btn{
+    cursor: pointer;
+    color: #7cdc66 !important;
+}
+
+.about-us-parent{
+    white-space: pre-line;
+}
+
+.long-text{
+    color:  #2f2e3d;
+}
