@@ -12,3 +12,10 @@
     left: 3%;
     top: 50%;
 }
+
+.right-slider{
+    position: absolute;
+    cursor: pointer;
+    right: 3%;
+    top: 50%;
+}
