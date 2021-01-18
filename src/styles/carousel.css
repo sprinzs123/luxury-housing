@@ -1,0 +1,14 @@
+.carousel-parent{
+    position: relative;
+}
+
+.img-row{
+    display: flex;
+}
+
+.left-slider{
+    position: absolute;
+    cursor: pointer;
+    left: 3%;
+    top: 50%;
+}

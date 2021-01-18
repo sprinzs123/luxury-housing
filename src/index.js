@@ -6,6 +6,7 @@ import NavBar from './NavBar';
 import AboutUs from './AboutUs';
 import ContactUs from './ContatcUs';
 import Amenities from './Amenities';
+import Carousel from './components/carousel'
 
 ReactDOM.render(
 <div>
@@ -43,5 +44,11 @@ ReactDOM.render(
     <Amenities />
   </div>,
       document.getElementById('contact')
+);
 
+ReactDOM.render(
+  <div>
+    <Carousel />
+  </div>,
+      document.getElementById('test')
 );

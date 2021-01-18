@@ -32,7 +32,6 @@ export default class Amenities extends Component {
 
 	btnToggleTwo = () => {
 		let hiddenMenu = document.querySelector(".hidden-amenities-two");
-		console.log(hiddenMenu);
 		if (this.state.btnOne === "SHOW MORE") {
 			hiddenMenu.classList.toggle("height-0");
 			this.setState({
