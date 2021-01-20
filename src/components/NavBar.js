@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import "./NavBar.css";
-import "./index.css";
+import "../styles/NavBar.css";
 
 
 class ShowNav extends Component {
@@ -72,22 +71,7 @@ class ShowNav extends Component {
 }
 
 
-function Modal() {
-    return (
-        <div className='nav-modal'>
-            <div className='nav-modal-flex'>
-                <ul className='modal-text'>
-                    <li>Home</li>
-                    <li>Amenities</li>
-                    <li>Neighborhood</li>
-                    <li>Gallery</li>
-                    <li>Residents</li>
-                    <li>Contact</li>
-                </ul>
-            </div>
-        </div>
-    )
-}
+
 
 
 

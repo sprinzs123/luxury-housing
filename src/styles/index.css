@@ -1,0 +1,74 @@
+body{
+  font-family: "Montserrat",sans-serif;
+}
+
+
+:root{
+  --mainGreen: #7cdc66;
+  --greyLight: #3a3947;
+  --greyDark: #2f2e3d;
+  --greyLight: rgb(95, 95, 95);
+
+}
+
+.small-text{
+  font-size: 12px;
+  flex-wrap: nowrap;
+
+}
+
+.green{
+  color: var(--mainGreen);
+}
+
+.btn-green{
+  background-color: var(--mainGreen);
+  color: #fff;
+  padding: 10px;
+  margin: 0.3em;
+  margin-left: 0;
+  display: inline;
+  border: 0;
+  font-size: 12px;
+  letter-spacing: 0.13em;
+}
+
+.btn-green:hover{
+  cursor: pointer;
+  background-color: rgb(95, 189, 0);
+}
+
+.container{
+  width: 85%;
+  margin: auto;
+}
+
+.grey-1{
+  background-color: var(--greyLight);
+}
+
+.grey-2{
+  background-color: var(--greyDark);
+}
+
+.btn-row{
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+@media(max-width: 780px){
+    .btn-row{
+      display: block ;
+    }
+
+    .btn-parent{
+      display: flex;
+    }
+
+    .btn-green{
+      flex: 1;
+      text-align: center;
+    }
+
+
+}

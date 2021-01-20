@@ -11,9 +11,9 @@ export default class carousel extends Component {
         super(props)
     
         this.state = {
-             images : [{"image": img1, "index": 0},
-                        {"image": img2, "index": 1},
-                        {"image": img3, "index": 2},
+             images : [{"image": img1, "index": 0, 'smallText': 'Make It Your Home', 'largeText': 'Living Begins Here', 'btnText': 'CHECK AVAILABILITY'},
+                        {"image": img2, "index": 1, 'smallText': 'Make It Your Home', 'largeText': 'Surround with the Best', 'btnText': 'Style Everywhere You Look'},
+                        {"image": img3, "index": 2, 'smallText': 'Make It Your Home', 'largeText': 'Find Your Home Today', 'btnText': 'Luxury for a Lifetime'},
             ],
             currentImg: 0
         }
@@ -22,7 +22,16 @@ export default class carousel extends Component {
     iterateImages = () =>{
         const images = this.state.images
         const currentImg = images[this.state.currentImg]
-        return <img key={currentImg} src={currentImg.image}  alt='not found'/>
+        return <div className="carousel-parent">
+                    <h1 onClick={this.slideBack} className='left-slider text-success'>x</h1>
+                    <h1 onClick={this.slideForwards} className='right-slider text-success'>x</h1>
+                    <img key={currentImg} src={currentImg.image} className='carousel-img' alt='not found'/>
+                    <div className="banner-text">
+                        <h4>{currentImg.smallText}</h4>
+                        <h1>{currentImg.largeText}</h1>
+                        <div className="btn-green">{currentImg.btnText}</div>
+                    </div>
+                </div> 
     }
 
     slideBack = () =>{
@@ -54,21 +63,15 @@ export default class carousel extends Component {
     }
 
     automaticScrolling = () =>{
-        setTimeout(this.slideForwards, 10000)
-        console.log('changed')
+        setTimeout(this.slideForwards, 100000)
     }
     
     render() {
         return (
-            <div>   
-                <div className="carousel-parent">
-                <h1 onClick={this.slideBack} className='left-slider text-success'>x</h1>
-                <h1 onClick={this.slideForwards} className='right-slider text-success'>x</h1>
-
-                <div className="img-row">
-                    {this.automaticScrolling()}
-                    {this.iterateImages()}
-                </div>    
+            <div> 
+                     <div className="img-row">
+                        {this.automaticScrolling()}
+                        {this.iterateImages()}
                 </div>
          
             </div>

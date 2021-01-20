@@ -1,5 +1,7 @@
 .carousel-parent{
     position: relative;
+    background: rgba(0, 0, 0, 1);
+
 }
 
 .img-row{
@@ -19,3 +21,13 @@
     right: 3%;
     top: 50%;
 }
+
+.banner-text{
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    color: white;
+}
+
+
+
