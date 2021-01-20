@@ -16,7 +16,7 @@ function Footer() {
                   <div className=" btn-green">BOOK YOUR TOUR</div>
                 </div>
                 <div className="btn-parent">
-                  <div className="btn-green">BOOK YOUR TOUR</div>
+                  <div className="btn-green">FIND YOUR HOME</div>
                 </div>
               </div>
             </div>

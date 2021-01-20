@@ -32,16 +32,14 @@ class ShowNav extends Component {
             })
             notNavBar.style.display = 'none'
             console.log(modal)
-
-
         }
-
     }
+
 
     render() {
         return (
             <div className='nav-bar-all'>
-                <nav className='nav-only'>
+                <nav className='nav-only' style={{backgroundImage: `url(${this.props.bannerImg})`}}>
                     <div className="nav-items">
                         <div className="log-nav">
                             <h1>Logo</h1>
@@ -63,8 +61,8 @@ class ShowNav extends Component {
                     </div>
                 </nav>
                 <div className='modal-parent'>
-
                 </div>
+                <h1 styles={{background: 'red'}}>test</h1>
             </div>
         )
     }

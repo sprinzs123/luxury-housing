@@ -5,7 +5,7 @@ body{
 
 :root{
   --mainGreen: #7cdc66;
-  --greyLight: #3a3947;
+  --greyLight:#3a3947;
   --greyDark: #2f2e3d;
   --greyLight: rgb(95, 95, 95);
 
@@ -44,7 +44,7 @@ body{
 }
 
 .grey-1{
-  background-color: var(--greyLight);
+  background-color: rgba(211, 20, 20, 0.05);
 }
 
 .grey-2{
