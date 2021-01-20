@@ -10,8 +10,10 @@ export default class contact extends Component {
         return (
             <div>
                 < NavBar bannerImg = {BannerLogo}  />
-                < ContactForm />
-                < Footer />
+                <div className="content">
+                    < ContactForm />
+                    < Footer />
+                </div>
             </div>
         )
     }
