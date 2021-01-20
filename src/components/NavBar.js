@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "../styles/NavBar.css";
+import { Link } from "react-router-dom";
 
 class ShowNav extends Component {
 	constructor() {
@@ -20,17 +21,16 @@ class ShowNav extends Component {
 				toggleButton: "Y",
 				showModal: true,
 			});
-            notNavBar.style.display = "inline";
-            modal.style.display = 'none';
-
+			notNavBar.style.display = "inline";
+			modal.style.display = "none";
 		}
 		if (toggleState === "Y") {
 			this.setState({
 				toggleButton: "X",
 				showModal: false,
 			});
-            notNavBar.style.display = "none";
-            modal.style.display = 'inline';
+			notNavBar.style.display = "none";
+			modal.style.display = "inline";
 		}
 	};
 
@@ -39,12 +39,18 @@ class ShowNav extends Component {
 			<div className="nav-modal">
 				<div className="nav-modal-flex">
 					<ul className="modal-text">
-						<li>Home</li>
-						<li>Amenities</li>
-						<li>Neighborhood</li>
-						<li>Gallery</li>
-						<li>Residents</li>
-						<li>Contact</li>
+						<li>
+							<Link to="/">Home</Link>
+						</li>
+						<li>
+							<Link to="/amenities">Amenities</Link>
+						</li>
+						<li>
+							<Link to="/gallery">Gallery</Link>
+						</li>
+						<li>
+							<Link to="/contact">Contact</Link>
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -60,12 +66,12 @@ class ShowNav extends Component {
 				>
 					<div className="nav-items">
 						<div className="log-nav">
-							<h1>Logo</h1>
+							<h1><Link to='/'></Link>Logo</h1>
 						</div>
 						<div className="nav-links">
 							<ul className="d-flex align-items-center">
-								<li className="small-text">Virtual Tours</li>
-								<li className="small-text">Book Your Tour</li>
+								<li className="small-text"><Link to='/gallery'>Virtual Tours</Link></li>
+								<li className="small-text"><Link to='/contact'>Book Your Tour</Link></li>
 								<li className="small-text">(874) 204-1589</li>
 							</ul>
 						</div>
@@ -86,12 +92,18 @@ class ShowNav extends Component {
 					<div className="nav-modal">
 						<div className="nav-modal-flex">
 							<ul className="modal-text">
-								<li>Home</li>
-								<li>Amenities</li>
-								<li>Neighborhood</li>
-								<li>Gallery</li>
-								<li>Residents</li>
-								<li>Contact</li>
+								<li>
+									<Link to="/">Home</Link>
+								</li>
+								<li>
+									<Link to="/amenities">Amenities</Link>
+								</li>
+								<li>
+									<Link to="/gallery">Gallery</Link>
+								</li>
+								<li>
+									<Link to="/contact">Contact</Link>
+								</li>
 							</ul>
 						</div>
 					</div>

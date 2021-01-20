@@ -3,10 +3,14 @@
     padding-bottom: 2em;
 }
 
-.footer-main{
+.footer-main{   
     background-color:#3a3947;
 }
 
+a:hover{
+    text-decoration: none;
+    color: rgba(255,255,255,0.5)
+  }
 
 .text-grey{
     color: rgba(255,255,255,0.5);
@@ -33,3 +37,6 @@ ul{
     padding-left: 15px;
 }
 
+.btn-green a{
+    color: white;
+}

@@ -1,5 +1,7 @@
 import React from "react";
 import "../styles/footer.css";
+import { Link } from "react-router-dom";
+
 
 function Footer() {
   return (
@@ -13,10 +15,10 @@ function Footer() {
             <div className="col-lg-6">
               <div className="btn-footer btn-row mt-3">
                 <div className="btn-parent">
-                  <div className=" btn-green">BOOK YOUR TOUR</div>
+                  <div className=" btn-green"><Link to='/contact'>BOOK YOUR TOUR</Link></div>
                 </div>
                 <div className="btn-parent">
-                  <div className="btn-green">FIND YOUR HOME</div>
+                  <div className="btn-green"><Link to='/floorplan'></Link>FIND YOUR HOME</div>
                 </div>
               </div>
             </div>
@@ -35,13 +37,13 @@ function Footer() {
               <li className="text-white pb-3">Our Address</li>
               <li className="small-text">1432 Main Street</li>
               <li className="small-text">(431) 292-9512</li>
-              <li className="small-text">Contact Us</li>
+              <li><Link to='/contact' className="small-text text-grey">Contact Us</Link></li>
             </ul>
             <ul className="col-md-4md-">
               <li className="text-white pb-3">Legal</li>
               <li className="small-text">2021 House</li>
               <li className="small-text">All Rights Reserved</li>
-              <li className="small-text">Contact Us</li>
+              <li><Link to='/contact' className="small-text text-grey">Contact Us</Link></li>
               <li className="small-text">Privacy Policy / Site Map / Share</li>
             </ul>
           </div>

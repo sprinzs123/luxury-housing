@@ -32,6 +32,10 @@ li{
     flex: 10
 }
 
+.small-text a{
+    color: white;
+}
+
 .log-nav{
     flex:2
 }
@@ -94,19 +98,22 @@ li{
 }
 
 
-
 .modal-text > li{
     font-size: 30px;
     text-align: center;
 }
 
-.modal-text > li:hover{
+.modal-text>li:hover{
     color:  #7cdc66
 }
 
+.modal-text li a{
+    color:  #7cdc66
+}
 
 .nav-modal{
     overflow: hidden;
     display: none;
 }
+
 
