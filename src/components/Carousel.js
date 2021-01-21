@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import Slider from "react-slick";
+
+
 import img1 from '../imgs/carousel1.jpg';
 import img2 from '../imgs/carousel2.jpg'
 import img3 from '../imgs/carousel3.jpg'
@@ -7,75 +10,76 @@ import '../styles/carousel.css'
 
 
 export default class carousel extends Component {
-    constructor(props) {
-        super(props)
-    
+    constructor() {
+        super()
+
         this.state = {
-             images : [{"image": img1, "index": 0, 'smallText': 'Make It Your Home', 'largeText': 'Living Begins Here', 'btnText': 'CHECK AVAILABILITY'},
-                        {"image": img2, "index": 1, 'smallText': 'Make It Your Home', 'largeText': 'Surround with the Best', 'btnText': 'Style Everywhere You Look'},
-                        {"image": img3, "index": 2, 'smallText': 'Make It Your Home', 'largeText': 'Find Your Home Today', 'btnText': 'Luxury for a Lifetime'},
-            ],
-            currentImg: 0
+            images: [{ "image": img1, "index": 0, 'smallText': 'Make It Your Home', 'largeText': 'Living Begins Here', 'btnText': 'CHECK AVAILABILITY' },
+            { "image": img2, "index": 1, 'smallText': 'Make It Your Home', 'largeText': 'Surround with the Best', 'btnText': 'Style Everywhere You Look' },
+            { "image": img3, "index": 2, 'smallText': 'Make It Your Home', 'largeText': 'Find Your Home Today', 'btnText': 'Luxury for a Lifetime' },]
         }
     }
 
-    iterateImages = () =>{
-        const images = this.state.images
-        const currentImg = images[this.state.currentImg]
-        return <div className="carousel-parent">
-                    <h1 onClick={this.slideBack} className='left-slider text-success'>x</h1>
-                    <h1 onClick={this.slideForwards} className='right-slider text-success'>x</h1>
-                    <img key={currentImg} src={currentImg.image} className='carousel-img' alt='not found'/>
-                    <div className="banner-text">
-                        <h4>{currentImg.smallText}</h4>
-                        <h1>{currentImg.largeText}</h1>
-                        <div className="btn-green">{currentImg.btnText}</div>
-                    </div>
-                </div> 
+
+
+   
+    test() {
+        const test = <h1>test</h1>
+        return test
     }
 
-    slideBack = () =>{
-        const currentIndex = this.state.currentImg
-        if(currentIndex === 0){
-            this.setState({
-                currentImg : 2
-            })
-        } else {
-            const newImage = currentIndex - 1
-            this.setState({
-                currentImg : newImage
-            })
-        }
-    }
 
-    slideForwards = () =>{
-        const currentIndex = this.state.currentImg
-        if(currentIndex === 2){
-            this.setState({
-                currentImg : 0
-            })
-        } else {
-            const newImage = currentIndex + 1
-            this.setState({
-                currentImg : newImage
-            })
-        }
-    }
-
-    automaticScrolling = () =>{
-        let isMounted = true
-        setTimeout(this.slideForwards, 1000)
-    }
-    
     render() {
+        const settings = {
+            dots: false,
+            infinite: true,
+            fade: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            speed: 2000,
+            autoplaySpeed: 3000,
+            cssEase: "linear"
+        };
+
+
         return (
-            <div> 
-                     <div className="img-row">
-                        {this.automaticScrolling()}
-                        {this.iterateImages()}
-                </div>
-         
+            <div>
+                {/* <h1>Test</h1> */}
+                <Slider {...settings}>
+                    <div>
+                        <div className="carousel-parent">
+                            <img  src={img1} />
+                            <div className="banner-text">
+                                <h4>Make It Your Home</h4>
+                                <h1>Living Begins Here</h1>
+                                <div className="btn-green">CHECK AVAILABILITY</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div className="carousel-parent">
+                            <img  src={img2} />
+                            <div className="banner-text">
+                                <h4>Make It Your Home</h4>
+                                <h1>Surround with the Best</h1>
+                                <div className="btn-green">Style Everywhere You Look</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div className="carousel-parent">
+                            <img  src={img3} />
+                            <div className="banner-text">
+                                <h4>Make It Your Home</h4>
+                                <h1>Find Your Home Today</h1>
+                                <div className="btn-green">Luxury for a Lifetime</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </Slider>
             </div>
-        )
+        );
     }
 }
