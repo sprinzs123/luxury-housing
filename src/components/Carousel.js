@@ -63,7 +63,8 @@ export default class carousel extends Component {
     }
 
     automaticScrolling = () =>{
-        setTimeout(this.slideForwards, 100000)
+        let isMounted = true
+        setTimeout(this.slideForwards, 1000)
     }
     
     render() {

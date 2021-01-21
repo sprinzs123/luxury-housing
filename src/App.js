@@ -6,6 +6,9 @@ import '../src/styles/index.css'
 
 import Contact from './pages/Contact';
 import Amenities from './pages/AmenitiesPage';
+import Gallery from './pages/GalleryPage'
+import Home from './pages/HomePage'
+
 
 
 
@@ -13,6 +16,7 @@ import Amenities from './pages/AmenitiesPage';
 function App() {
     return (
         <Router>
+            <Route exact path='/' component={Home} />
             <Route exact path='/contact' component={Contact} />
             <Route exact path='/amenities' component={Amenities} />
         </Router>
