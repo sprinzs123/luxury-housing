@@ -20,15 +20,6 @@ export default class carousel extends Component {
         }
     }
 
-
-
-   
-    test() {
-        const test = <h1>test</h1>
-        return test
-    }
-
-
     render() {
         const settings = {
             dots: false,
@@ -38,45 +29,47 @@ export default class carousel extends Component {
             slidesToScroll: 1,
             autoplay: true,
             speed: 2000,
-            autoplaySpeed: 3000,
-            cssEase: "linear"
+            autoplaySpeed: 300000,
+            cssEase: "linear",
+            adaptiveHeight: true
         };
 
-
+        // use react slick for carousel
         return (
             <div>
                 {/* <h1>Test</h1> */}
                 <Slider {...settings}>
-                    <div>
-                        <div className="carousel-parent">
-                            <img  src={img1} />
-                            <div className="banner-text">
-                                <h4>Make It Your Home</h4>
-                                <h1>Living Begins Here</h1>
-                                <div className="btn-green">CHECK AVAILABILITY</div>
+                        <div className>
+                            <div className="carousel-parent">
+                                <img src={img1} />
+                                <div className="banner-text">
+                                    <h4>Make It Your Home</h4>
+                                    <h1>Living Begins Here</h1>
+                                    <div className="btn-green">CHECK AVAILABILITY</div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div>
-                        <div className="carousel-parent">
-                            <img  src={img2} />
-                            <div className="banner-text">
-                                <h4>Make It Your Home</h4>
-                                <h1>Surround with the Best</h1>
-                                <div className="btn-green">Style Everywhere You Look</div>
+                        <div>
+                            <div className="carousel-parent">
+                                <img src={img2} />
+                                <div className="banner-text">
+                                    <h4>Make It Your Home</h4>
+                                    <h1>Surround with the Best</h1>
+                                    <div className="btn-green">Style Everywhere You Look</div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div>
-                        <div className="carousel-parent">
-                            <img  src={img3} />
-                            <div className="banner-text">
-                                <h4>Make It Your Home</h4>
-                                <h1>Find Your Home Today</h1>
-                                <div className="btn-green">Luxury for a Lifetime</div>
+                        <div>
+                            <div className="carousel-parent">
+                                <img src={img3} />
+                                <div className="banner-text">
+                                    <h4>Make It Your Home</h4>
+                                    <h1>Find Your Home Today</h1>
+                                    <div className="btn-green">Luxury for a Lifetime</div>
+                                </div>
                             </div>
                         </div>
-                    </div>
+
 
                 </Slider>
             </div>
