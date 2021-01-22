@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Slider from "react-slick";
+import NavBar from '../components/NavBar'
 
 
 import img1 from '../imgs/carousel1.jpg';
@@ -29,17 +30,17 @@ export default class carousel extends Component {
             slidesToScroll: 1,
             autoplay: true,
             speed: 2000,
-            autoplaySpeed: 300000,
+            autoplaySpeed: 30000,
             cssEase: "linear",
             adaptiveHeight: true
         };
 
         // use react slick for carousel
         return (
-            <div>
-                {/* <h1>Test</h1> */}
-                <Slider {...settings}>
-                        <div className>
+            <div className='home-slider'>
+                <div className='all-carousel'>
+                    <Slider {...settings}>
+                        <div>
                             <div className="carousel-parent">
                                 <img src={img1} />
                                 <div className="banner-text">
@@ -69,9 +70,34 @@ export default class carousel extends Component {
                                 </div>
                             </div>
                         </div>
+                    </Slider>
+                </div>
+                <div className='nav-bar-front'>
+                    < NavBar />
+                </div>
+                <div className='under-carousel content'>
+                    <div className='carousel-footer-parent'>
+                        <div className='carousel-footer border-right'>
+                            <div className="under-carousel-text">
+                                <h5>MAKE IT YOUR HOME</h5>
+                                <h>Surround with the Best</h>
+                            </div>
+                        </div>
+                        <div className='carousel-footer border-right'>
+                            <div className="under-carousel-text">
+                                <h5>VIEW AMENITIES</h5>
+                                <h>Indulgent Details</h>
+                            </div>
+                        </div>    
+                        <div className='carousel-footer border-right'>
+                            <div className="under-carousel-text">
+                                <h5>VIEW THE GALLERY</h5>
+                                <h>Luxury Living</h>
+                            </div>
+                        </div>
 
-
-                </Slider>
+                    </div>
+                </div>
             </div>
         );
     }

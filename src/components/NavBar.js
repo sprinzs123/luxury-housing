@@ -34,28 +34,28 @@ class ShowNav extends Component {
 		}
 	};
 
-	Modal() {
-		return (
-			<div className="nav-modal">
-				<div className="nav-modal-flex">
-					<ul className="modal-text">
-						<li>
-							<Link to="/">Home</Link>
-						</li>
-						<li>
-							<Link to="/amenities">Amenities</Link>
-						</li>
-						<li>
-							<Link to="/gallery">Gallery</Link>
-						</li>
-						<li>
-							<Link to="/contact">Contact</Link>
-						</li>
-					</ul>
-				</div>
-			</div>
-		);
-	}
+	// Modal() {
+	// 	return (
+	// 		<div className="nav-modal">
+	// 			<div className="nav-modal-flex">
+	// 				<ul className="modal-text">
+	// 					<li>
+	// 						<Link to="/">Home</Link>
+	// 					</li>
+	// 					<li>
+	// 						<Link to="/amenities">Amenities</Link>
+	// 					</li>
+	// 					<li>
+	// 						<Link to="/gallery">Gallery</Link>
+	// 					</li>
+	// 					<li>
+	// 						<Link to="/contact">Contact</Link>
+	// 					</li>
+	// 				</ul>
+	// 			</div>
+	// 		</div>
+	// 	);
+	// }
 
 	render() {
 		return (

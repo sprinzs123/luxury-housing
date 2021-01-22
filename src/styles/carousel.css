@@ -1,7 +1,7 @@
 .carousel-parent{
     position: relative;
     background: rgba(0, 0, 0, 0.5);
-    height: 75vh;
+    height: 100vh;
 
 }
 
@@ -38,3 +38,52 @@
 
 
 
+.home-slider{
+    position: relative;
+}
+
+.carousel-footer-parent{
+    display: flex;
+}
+
+
+.carousel-footer{
+    border-top: 1px solid white;
+    height: 15vh;
+    width: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.under-carousel{
+    position: absolute;
+    top: 85%;
+    width: 100%;
+}
+
+.under-carousel-text{
+    padding-left: 2em;
+    align-items: center;
+}
+
+
+
+.nav-bar-front{
+    position: absolute;
+    top: 0%;
+    width: 100%;
+}
+
+
+@media(max-width: 800px){
+    .carousel-footer-parent{
+        display: inline;
+    }
+
+    .under-carousel{
+        position: relative;
+    }
+}
