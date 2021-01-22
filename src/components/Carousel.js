@@ -30,7 +30,7 @@ export default class carousel extends Component {
             slidesToScroll: 1,
             autoplay: true,
             speed: 2000,
-            autoplaySpeed: 30000,
+            autoplaySpeed: 3000,
             cssEase: "linear",
             adaptiveHeight: true
         };
@@ -77,22 +77,22 @@ export default class carousel extends Component {
                 </div>
                 <div className='under-carousel content'>
                     <div className='carousel-footer-parent'>
-                        <div className='carousel-footer border-right'>
+                        <div className='carousel-footer footer-1 border-right'>
                             <div className="under-carousel-text">
                                 <h5>MAKE IT YOUR HOME</h5>
-                                <h>Surround with the Best</h>
+                                <h6>Surround with the Best</h6>
                             </div>
                         </div>
-                        <div className='carousel-footer border-right'>
+                        <div className='carousel-footer footer-2 border-right'>
                             <div className="under-carousel-text">
                                 <h5>VIEW AMENITIES</h5>
-                                <h>Indulgent Details</h>
+                                <h6>Indulgent Details</h6>
                             </div>
                         </div>    
-                        <div className='carousel-footer border-right'>
+                        <div className='carousel-footer footer-3 border-right'>
                             <div className="under-carousel-text">
                                 <h5>VIEW THE GALLERY</h5>
-                                <h>Luxury Living</h>
+                                <h6>Luxury Living</h6>
                             </div>
                         </div>
 

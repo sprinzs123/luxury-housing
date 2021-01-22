@@ -1,5 +1,4 @@
 nav{
-    /* background-image: url('./imgs/navBanner.jpg'); */
     background-size: cover;
     color: white;
     display: flex;
@@ -13,6 +12,10 @@ nav{
 
 li{
     list-style: none;
+}
+
+.bg-nav{
+    background-color: #2f2e3d;
 }
 
 .nav-items{
@@ -87,7 +90,6 @@ li{
     }
 }
 
-/* modal styles */
 .nav-modal-flex{
     height: 85vh;
     background-color: #2f2e3d;
@@ -96,7 +98,6 @@ li{
     justify-content: center;
     align-items: center;
 }
-
 
 .modal-text > li{
     font-size: 30px;

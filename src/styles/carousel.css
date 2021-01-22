@@ -55,6 +55,7 @@
     display: flex;
     align-items: center;
     cursor: pointer;
+    overflow: hidden;
 }
 
 
@@ -67,6 +68,19 @@
 .under-carousel-text{
     padding-left: 2em;
     align-items: center;
+}
+
+.footer-1:hover{
+    background-image: url('../imgs/galery5.jpg');    
+}
+
+.footer-2:hover{
+    background-image: url('../imgs/gal4.jpg');    
+}
+
+
+.footer-3:hover{
+    background-image: url('../imgs/galery1.jpg');    
 }
 
 

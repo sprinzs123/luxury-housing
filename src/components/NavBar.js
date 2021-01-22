@@ -15,6 +15,7 @@ class ShowNav extends Component {
 		const toggleState = this.state.toggleButton;
 		const notNavBar = document.querySelector(".content");
 		const modal = document.querySelector(".nav-modal");
+		const navbar = document.querySelector('#nav-bar-all');
 
 		if (toggleState === "X") {
 			this.setState({
@@ -23,7 +24,9 @@ class ShowNav extends Component {
 			});
 			notNavBar.style.display = "inline";
 			modal.style.display = "none";
+			navbar.classList.toggle('bg-nav')
 		}
+		// hide everything and show nav modal
 		if (toggleState === "Y") {
 			this.setState({
 				toggleButton: "X",
@@ -31,37 +34,17 @@ class ShowNav extends Component {
 			});
 			notNavBar.style.display = "none";
 			modal.style.display = "inline";
+			navbar.classList.toggle('bg-nav')
 		}
 	};
 
-	// Modal() {
-	// 	return (
-	// 		<div className="nav-modal">
-	// 			<div className="nav-modal-flex">
-	// 				<ul className="modal-text">
-	// 					<li>
-	// 						<Link to="/">Home</Link>
-	// 					</li>
-	// 					<li>
-	// 						<Link to="/amenities">Amenities</Link>
-	// 					</li>
-	// 					<li>
-	// 						<Link to="/gallery">Gallery</Link>
-	// 					</li>
-	// 					<li>
-	// 						<Link to="/contact">Contact</Link>
-	// 					</li>
-	// 				</ul>
-	// 			</div>
-	// 		</div>
-	// 	);
-	// }
 
 	render() {
 		return (
-			<div className="nav-bar-all">
+			<div className="">
 				<nav
 					className="nav-only"
+					id='nav-bar-all'
 					style={{ backgroundImage: `url(${this.props.bannerImg})` }}
 				>
 					<div className="nav-items">
