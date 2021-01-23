@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-// import Footer from '../components/Footer'
-// import NavBar from '../components/NavBar'
+import AboutUs from '../components/AboutUs'
+import ImageRow from '../components/ImageRow'
+import Footer from '../components/Footer'
 import Carousel from '../components/Carousel'
 
 export default class HomePage extends Component {
@@ -8,6 +9,9 @@ export default class HomePage extends Component {
         return (
             <div>
                 < Carousel />
+                < AboutUs />
+                < ImageRow />
+                < Footer />
             </div>
         )
     }

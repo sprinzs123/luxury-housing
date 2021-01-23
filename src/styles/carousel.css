@@ -5,28 +5,24 @@
 
 }
 
+
+
 .carousel-parent img{
     height: 100%;
     width: auto;
 }
 
+.carousel-parent{
+    filter: brightness(80%);
+}
+
+
+
 .img-row{
     display: flex;
 }
 
-.left-slider{
-    position: absolute;
-    cursor: pointer;
-    left: 3%;
-    top: 50%;
-}
 
-.right-slider{
-    position: absolute;
-    cursor: pointer;
-    right: 3%;
-    top: 50%;
-}
 
 .banner-text{
     position: absolute;
@@ -61,7 +57,7 @@
 
 .under-carousel{
     position: absolute;
-    top: 85%;
+    top: 84.49%;
     width: 100%;
 }
 
@@ -72,15 +68,21 @@
 
 .footer-1:hover{
     background-image: url('../imgs/galery5.jpg');    
+    filter: brightness(80%);
+
 }
 
 .footer-2:hover{
-    background-image: url('../imgs/gal4.jpg');    
+    background-image: url('../imgs/gal4.jpg');   
+    filter: brightness(80%);
+
 }
 
 
 .footer-3:hover{
-    background-image: url('../imgs/galery1.jpg');    
+    background-image: url('../imgs/galery1.jpg'); 
+    filter: brightness(80%);
+   
 }
 
 

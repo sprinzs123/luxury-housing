@@ -30,7 +30,7 @@ export default class carousel extends Component {
             slidesToScroll: 1,
             autoplay: true,
             speed: 2000,
-            autoplaySpeed: 3000,
+            autoplaySpeed: 30000,
             cssEase: "linear",
             adaptiveHeight: true
         };
