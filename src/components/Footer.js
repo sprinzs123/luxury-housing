@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 function Footer() {
   return (
     <div>
-      <div className="footer-main grey-1">
+      <div className="footer-main grey-1" data-aos="zoom-in">
         <div className="container">
           <div className="smaller-footer green row">
             <div className="col-lg-6">

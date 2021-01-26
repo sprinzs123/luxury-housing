@@ -12,7 +12,7 @@ import pic6 from '../imgs/galery6.jpg'
 
 function App() {
   return (
-    <div className="images-row">
+    <div className="images-row" >
     <ul className="small-images">   
         <li><img src={pic1} className='img-footer' alt="logo" /></li> 
         <li><img src={pic2} className='img-footer' alt="logo" /></li>   
