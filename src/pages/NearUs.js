@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import BannerLogo from "../imgs/navBanner.jpg"
 import Footer from '../components/Footer'
 import NavBar from '../components/NavBar'
-import Map from '../components/Map'
+import MapParent from '../components/MapParent'
 
 
 export default class contact extends Component {
@@ -11,7 +11,7 @@ export default class contact extends Component {
             <div>
                 < NavBar bannerImg = {BannerLogo}  />
                 <div className="content">
-                    < Map />
+                    < MapParent />
                     < Footer />
                 </div>
             </div>
