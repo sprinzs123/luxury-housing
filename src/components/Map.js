@@ -1,19 +1,31 @@
-import React from 'react'
-import { GoogleMap, withScriptjs, withGoogleMap } from 'react-google-maps'
+import React, { useState } from 'react'
+import { GoogleMap, withScriptjs, withGoogleMap, Marker } from 'react-google-maps'
+// import MapInit from '../components/MapMarkers'
 
-function Map() {
-    return (
+function Map(locationObjects) {
+
+    return (     
+        // console.log(locationObjects.map(location =>(location)
+  
         <GoogleMap 
             defaultZoom={14}
             defaultCenter={{ lat: 37.7749, lng: -122.4194 }}
-        />
+        >
+            {/* {locationObjects.map(location =>( */}
+                <Marker position={{ lat: 37.7749, lng: -122.4194 }} />
+
+            {/* ))} */}
+    </GoogleMap>
     )
 }
 
 const WrappedMap = withScriptjs(withGoogleMap(Map))
 
 
-export default function App() {
+export default function App(props) {
+    const [selectedPlace, setSelectedPlace] = useState(null);
+    Map(props.data)
+
     return  (
         <div>
            <WrappedMap
