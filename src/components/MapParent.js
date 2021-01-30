@@ -8,30 +8,37 @@ import MapMarkers from '../components/MapMarkers'
 
 function MapWrapper() {
     const allPlaces = [
-        [{ "name": "place1", "addres": "address1" },
-        { "name": "place1.1", "addres": "address1.1" }],
+        [{ "name": "Oasis Grill", "addres": "address1" , 'location': [37.78346141612193, -122.39977064569881]},
+        { "name": "Ristorante Milano", "addres": "address1.1", "location": [37.79525853673037, -122.4203700215186] },
+        { "name": "Quince", "addres": "address1.1", "location": [37.79797144289688, -122.40251723737924] },
+        { "name": "Mourad", "addres": "address1.1", "location": [37.78793319230151, -122.39925567106314] },
+        { "name": "Blackwood", "addres": "address1.1", "location": [37.801091161838734, -122.434532085024] },
+        { "name": "Sweet Maple", "addres": "address1.1", "location": [37.78644090345005, -122.42843810585444] }  
+        ],
 
-        [{ "name": "place2", "addres": "address2" },
-        { "name": "place2.1", "addres": "address2.1" }]
+        [{ "name": "Caffe Union", "addres": "address1" , 'location': [37.798782705531636, -122.42483322221106]},
+        { "name": "Caffe Capricio", "addres": "address1.1", "location": [37.80454723711336, -122.40938369755577] },
+        { "name": "Caffe Greco", "addres": "address1.1", "location": [37.799800008502125, -122.4112719727914] },
+        { "name": "illy Caffe", "addres": "address1.1", "location": [37.79206815455429, -122.40500633223677] },
+        { "name": "R Caffe", "addres": "address1.1", "location": [37.78331797550752, -122.41728012126848] },
+        { "name": "Caffe Bianco", "addres": "address1.1", "location": [37.79057594923993, -122.39977065999248] }  
+        ]   
     ]
 
     const [placeCategory, setPlace] = useState(allPlaces[0]);
 
 
 
-    function Map(locationObjects) {
-
-        return (     
-            // console.log(locationObjects.map(location =>(location)
-      
+    function Map() {
+        return (          
             <GoogleMap 
-                defaultZoom={14}
-                defaultCenter={{ lat: 37.7749, lng: -122.4194 }}
+                defaultZoom={13.5}
+                defaultCenter={{ lat: 37.7711, lng: -122.4021 }}
             >
-                {/* {locationObjects.map(location =>( */}
-                    <Marker position={{ lat: 37.7749, lng: -122.4194 }} />
+                {placeCategory.map(place =>(
+                    <Marker position={{ lat: place.location[0], lng: place.location[1] }} />
     
-                {/* ))} */}
+                  ))} 
         </GoogleMap>
         )
     }
@@ -41,7 +48,7 @@ function MapWrapper() {
     
     function App(props) {
         const [selectedPlace, setSelectedPlace] = useState(null);
-        Map(props.data)
+ 
     
         return  (
             <div>
@@ -53,7 +60,6 @@ function MapWrapper() {
                     />
             </div>
         )
-        
     }
 
     return (
