@@ -2,11 +2,14 @@ import React, { useState } from 'react';
 import { GoogleMap, withScriptjs, withGoogleMap, Marker, InfoWindow } from 'react-google-maps';
 
 import Options from '../components/UnderMap'
-import Map from '../components/Map'
-import MapMarkers from '../components/MapMarkers'
+import mapStyles from '../data/mapStyles'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee, faBicycle, faUtensils, faTag } from '@fortawesome/free-solid-svg-icons'
+
+
+import coffee from '../logos/coffee.svg'
+
 
 
 
@@ -40,6 +43,7 @@ function MapWrapper() {
             <GoogleMap
                 defaultZoom={13.5}
                 defaultCenter={{ lat: 37.7944, lng: -122.4021 }}
+                defaultOptions={{styles: mapStyles}}
             >
                 {placeCategory.map(place => (
                     <Marker
@@ -50,7 +54,8 @@ function MapWrapper() {
                     }}
                     onClick={() => {setSelectedPlace(place) }}
                     icon={{
-                        url: "/logo192.png"
+                        url: '/coffee.png',
+                        scaledSize: new window.google.maps.Size(20, 20)
                         
                     }}
                      />
