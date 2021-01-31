@@ -5,6 +5,11 @@ import Options from '../components/UnderMap'
 import Map from '../components/Map'
 import MapMarkers from '../components/MapMarkers'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee, faBicycle, faUtensils, faTag } from '@fortawesome/free-solid-svg-icons'
+
+
+
 
 function MapWrapper() {
     const allPlaces = [
@@ -26,12 +31,11 @@ function MapWrapper() {
     ]
 
     const [placeCategory, setPlace] = useState(allPlaces[0]);
-
+    const placesIcons = [ faUtensils, faCoffee, faBicycle, faTag]
 
 
     function Map() {
         const [selectedPlace, setSelectedPlace] = useState(null);
-
         return (
             <GoogleMap
                 defaultZoom={13.5}
@@ -45,10 +49,12 @@ function MapWrapper() {
                             lng: place.location[1] 
                     }}
                     onClick={() => {setSelectedPlace(place) }}
-
+                    icon={{
+                        url: "/logo192.png"
+                        
+                    }}
                      />
                 ))}
-
                 {selectedPlace && (
                     <InfoWindow
                         position={{
@@ -69,9 +75,7 @@ function MapWrapper() {
     const WrappedMap = withScriptjs(withGoogleMap(Map))
 
 
-    function App(props) {
-
-
+    function App() {
         return (
             <div>
                 <WrappedMap
@@ -96,9 +100,7 @@ function MapWrapper() {
                     mapElement={<div style={{ height: `100%` }} />}
                 />
             </div>
-            {/* < Map data={placeCategory} /> */}
-            < Options data={placeCategory} />
-
+            < Options data={placeCategory} logo={placesIcons[allPlaces.indexOf(placeCategory)]} />
         </div>
     );
 }
