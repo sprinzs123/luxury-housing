@@ -1,126 +1,140 @@
-import React, { useState } from 'react';
-import { GoogleMap, withScriptjs, withGoogleMap, Marker, InfoWindow } from 'react-google-maps';
+import React, { useState } from "react";
+import {
+	GoogleMap,
+	withScriptjs,
+	withGoogleMap,
+	Marker,
+	InfoWindow,
+} from "react-google-maps";
 
-import Options from '../components/UnderMap'
-import mapStyles from '../data/mapStyles'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+	faCoffee,
+	faBicycle,
+	faUtensils,
+	faTag,
+} from "@fortawesome/free-solid-svg-icons";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee, faBicycle, faUtensils, faTag } from '@fortawesome/free-solid-svg-icons'
-
-import placesData from '../data/placesData.json'
-
-
-
-
-
-
+import Options from "../components/UnderMap";
+import mapStyles from "../data/mapStyles";
+import placesData from "../data/placesData.json";
+import "../styles/maps.css";
 
 function MapWrapper() {
-    const allPlaces = [
-        [{ "name": "Oasis Grill", "addres": "address1", 'location': [37.78346141612193, -122.39977064569881] },
-        { "name": "Ristorante Milano", "addres": "address1.1", "location": [37.79525853673037, -122.4203700215186] },
-        { "name": "Quince", "addres": "address1.1", "location": [37.79797144289688, -122.40251723737924] },
-        { "name": "Mourad", "addres": "address1.1", "location": [37.78793319230151, -122.39925567106314] },
-        { "name": "Blackwood", "addres": "address1.1", "location": [37.801091161838734, -122.434532085024] },
-        { "name": "Sweet Maple", "addres": "address1.1", "location": [37.78644090345005, -122.42843810585444] }
-        ],
+	const [placeCategory, setPlace] = useState(placesData["coffee"]);
 
-        [{ "name": "Caffe Union", "addres": "address1", 'location': [37.798782705531636, -122.42483322221106] },
-        { "name": "Caffe Capricio", "addres": "address1.1", "location": [37.80454723711336, -122.40938369755577] },
-        { "name": "Caffe Greco", "addres": "address1.1", "location": [37.799800008502125, -122.4112719727914] },
-        { "name": "illy Caffe", "addres": "address1.1", "location": [37.79206815455429, -122.40500633223677] },
-        { "name": "R Caffe", "addres": "address1.1", "location": [37.78331797550752, -122.41728012126848] },
-        { "name": "Caffe Bianco", "addres": "address1.1", "location": [37.79057594923993, -122.39977065999248] }
-        ],
+	function Map() {
+		const [selectedPlace, setSelectedPlace] = useState(null);
 
-        [{ "name": "Caffe Union", "addres": "address1", 'location': [37.798782705531636, -122.42483322221106] },
-        { "name": "Caffe Capricio", "addres": "address1.1", "location": [37.80454723711336, -122.40938369755577] },
-        { "name": "Caffe Greco", "addres": "address1.1", "location": [37.799800008502125, -122.4112719727914] },
-        { "name": "illy Caffe", "addres": "address1.1", "location": [37.79206815455429, -122.40500633223677] },
-        { "name": "R Caffe", "addres": "address1.1", "location": [37.78331797550752, -122.41728012126848] },
-        { "name": "Caffe Bianco", "addres": "address1.1", "location": [37.79057594923993, -122.39977065999248] }
-        ],
-    ]
+		return (
+			<GoogleMap
+				defaultZoom={13.5}
+				defaultCenter={{ lat: 37.7944, lng: -122.4021 }}
+				defaultOptions={{ styles: mapStyles }}
+			>
+				{placeCategory["locations"].map((place) => (
+					<Marker
+						key={place.name}
+						position={{
+							lat: place.location[0],
+							lng: place.location[1],
+						}}
+						onClick={() => {
+							setSelectedPlace(place);
+						}}
+						icon={{
+							url: placeCategory["logoUrl"],
+							scaledSize: new window.google.maps.Size(20, 20),
+						}}
+					/>
+				))}
+				{selectedPlace && (
+					<InfoWindow
+						position={{
+							lat: selectedPlace.location[0],
+							lng: selectedPlace.location[1],
+						}}
+						onCloseClick={() => {
+							setSelectedPlace(null);
+						}}
+					>
+						<h3>{selectedPlace.name}</h3>
+					</InfoWindow>
+				)}
+			</GoogleMap>
+		);
+	}
 
-    const [placeCategory, setPlace] = useState(allPlaces[0]);
-    const placesIcons = [ faUtensils, faCoffee, faBicycle, faTag]
-    const logosList = ['../fork.svg', '../coffee.svg', '../shopping.svg', '../fork.svg']
-    console.log(placesData.food)
-    const currentLogo = logosList[0]
+	const WrappedMap = withScriptjs(withGoogleMap(Map));
 
-    function Map() {
-        const [selectedPlace, setSelectedPlace] = useState(null);
+	function App() {
+		return (
+			<div>
+				<WrappedMap
+					googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${process.env.REACT_APP_GOOGLE_KEY}`}
+					loadingElement={<div style={{ height: `100%` }} />}
+					containerElement={<div style={{ height: `400px` }} />}
+					mapElement={<div style={{ height: `100%` }} />}
+				/>
+			</div>
+		);
+	}
 
-        return (
-            <GoogleMap
-                defaultZoom={13.5}
-                defaultCenter={{ lat: 37.7944, lng: -122.4021 }}
-                defaultOptions={{styles: mapStyles}}
-            >
-                {placeCategory.map(place => (
-                    <Marker
-                        key={place.name}
-                        position={{
-                            lat: place.location[0],
-                            lng: place.location[1] 
-                    }}
-                    onClick={() => {setSelectedPlace(place) }}
-                    icon={{
-                        url: currentLogo,
-                        scaledSize: new window.google.maps.Size(20, 20)
-                        
-                    }}
-                     />
-                ))}
-                {selectedPlace && (
-                    <InfoWindow
-                        position={{
-                            lat: selectedPlace.location[0],
-                            lng: selectedPlace.location[1] 
-                        }}
-                        onCloseClick={() => {
-                            setSelectedPlace(null)
-                        }}
-                        >
-                            <h3>{selectedPlace.name}</h3>
-                    </InfoWindow>
-                )}
-            </GoogleMap>
-        )
-    }
+	return (
+		<div>
+			<div>
+				<WrappedMap
+					googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${process.env.REACT_APP_GOOGLE_KEY}`}
+					loadingElement={<div style={{ height: `100%` }} />}
+					containerElement={<div style={{ height: `400px` }} />}
+					mapElement={<div style={{ height: `100%` }} />}
+				/>
+			</div>
 
-    const WrappedMap = withScriptjs(withGoogleMap(Map))
+			<div className="maps-btns">
+				<div className="maps-btn-parent">
+					<div className="border-right">
+						<div
+							className="map-btn"
+							onClick={() => setPlace(placesData["food"])}
+						>
+							<FontAwesomeIcon icon={faUtensils} size="lg" />
+							<h5 className="ml-3">Restaurants </h5>
+						</div>
+					</div>
+					<div className="border-right">
+						<div
+							className="map-btn"
+							onClick={() => setPlace(placesData["coffee"])}
+						>
+							<FontAwesomeIcon icon={faCoffee} size="lg" />
+							<h5 className="ml-3">Coffee</h5>
+						</div>
+					</div>
+					<div className="border-right">
+						<div
+							className="map-btn"
+							onClick={() => setPlace(placesData["food"])}
+						>
+							<FontAwesomeIcon icon={faTag} size="lg" />
+							<h5 className="ml-3">Shopping</h5>
+						</div>
+					</div>
+					<div className="pr-0">
+						<div
+							className="map-btn"
+							onClick={() => setPlace(placesData["food"])}
+						>
+							<FontAwesomeIcon icon={faBicycle} size="lg" />
+							<h5 className="ml-3">Recreation</h5>
+						</div>
+					</div>
+				</div>
+			</div>
 
-
-    function App() {
-        return (
-            <div>
-                <WrappedMap
-                    googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${process.env.REACT_APP_GOOGLE_KEY}`}
-                    loadingElement={<div style={{ height: `100%` }} />}
-                    containerElement={<div style={{ height: `400px` }} />}
-                    mapElement={<div style={{ height: `100%` }} />}
-                />
-            </div>
-        )
-    }
-
-    return (
-        <div>
-            <button onClick={() => setPlace(allPlaces[0])}>Click me</button>
-            <button onClick={() => setPlace(allPlaces[1])}>Click me</button>
-            <div>
-                <WrappedMap
-                    googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${process.env.REACT_APP_GOOGLE_KEY}`}
-                    loadingElement={<div style={{ height: `100%` }} />}
-                    containerElement={<div style={{ height: `400px` }} />}
-                    mapElement={<div style={{ height: `100%` }} />}
-                />
-            </div>
-            < Options data={placeCategory} logo={placesIcons[allPlaces.indexOf(placeCategory)]} />
-        </div>
-    );
+			{/* < Options data={placeCategory} logo={placesIcons[allPlaces.indexOf(placeCategory)]} /> */}
+		</div>
+	);
 }
 
-export default MapWrapper
-
+export default MapWrapper;

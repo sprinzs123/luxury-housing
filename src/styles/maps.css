@@ -1,0 +1,35 @@
+.map-btn{
+    padding-top: 2em;
+    padding-bottom: 2em;
+    background-color: #7cdc66;
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+
+.map-btn:hover{
+    cursor: pointer;
+    background-color: rgb(95, 189, 0);
+}
+
+.maps-btn-parent{
+    display: flex;
+}
+
+.maps-btn-parent div{
+    flex: 1;
+}
+
+
+@media(max-width: 1090px){
+    .maps-btn-parent{
+        display: block;
+        width: 100%;
+    }
+
+    .maps-btn-parent div{
+        margin-bottom: 3px;
+    }
+}
