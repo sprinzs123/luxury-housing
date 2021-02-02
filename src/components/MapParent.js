@@ -13,6 +13,7 @@ import {
 	faBicycle,
 	faUtensils,
 	faTag,
+	faHome
 } from "@fortawesome/free-solid-svg-icons";
 
 import Options from "../components/UnderMap";
@@ -21,7 +22,7 @@ import placesData from "../data/placesData.json";
 import "../styles/maps.css";
 
 function MapWrapper() {
-	const [placeCategory, setPlace] = useState(placesData["coffee"]);
+	const [placeCategory, setPlace] = useState(placesData["food"]);
 
 	function Map() {
 		const [selectedPlace, setSelectedPlace] = useState(null);
@@ -48,6 +49,13 @@ function MapWrapper() {
 						}}
 					/>
 				))}
+				<Marker
+					position={{
+						lat: 37.78982588149873,
+						lng: -122.41782149701461,
+					}}
+					
+				/>
 				{selectedPlace && (
 					<InfoWindow
 						position={{
