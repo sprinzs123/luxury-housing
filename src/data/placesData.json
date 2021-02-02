@@ -1,35 +1,36 @@
 {
 	"food": {
 		"logoUrl": "../fork.svg",
+		"title": "Restaurant",
 		"locations": [
 			{
 				"name": "Oasis Grill",
-				"addres": "address1",
+				"addres": "91 Drumm St, San Francisco, CA 94111",
 				"location": [37.78346141612193, -122.39977064569881]
 			},
 			{
 				"name": "Ristorante Milano",
-				"addres": "address1.1",
+				"addres": "1448 Pacific Ave, San Francisco, CA 94109",
 				"location": [37.79525853673037, -122.4203700215186]
 			},
 			{
 				"name": "Quince",
-				"addres": "address1.1",
+				"addres": "470 Pacific Ave, San Francisco, CA 94133",
 				"location": [37.79797144289688, -122.40251723737924]
 			},
 			{
 				"name": "Mourad",
-				"addres": "address1.1",
+				"addres": "140 New Montgomery St #1, San Francisco, CA 94105",
 				"location": [37.78793319230151, -122.39925567106314]
 			},
 			{
 				"name": "Blackwood",
-				"addres": "address1.1",
+				"addres": "2150 Chestnut St, San Francisco, CA 94123",
 				"location": [37.801091161838734, -122.434532085024]
 			},
 			{
 				"name": "Sweet Maple",
-				"addres": "address1.1",
+				"addres": "2101 Sutter St, San Francisco, CA 94115",
 				"location": [37.78644090345005, -122.42843810585444]
 			}
 		]
@@ -37,30 +38,31 @@
 
 	"coffee": {
 		"logoUrl": "../coffee.svg",
+		"title": "Coffee",
 		"locations": [
 			{
 				"name": "Caffe Union",
-				"addres": "address1",
+				"addres": "1830 Union St, San Francisco, CA 94123",
 				"location": [37.798782705531636, -122.42483322221106]
 			},
 			{
 				"name": "Caffe Capricio",
-				"addres": "address1.1",
+				"addres": "2200 Mason St, San Francisco, CA 94133",
 				"location": [37.80454723711336, -122.40938369755577]
 			},
 			{
 				"name": "Caffe Greco",
-				"addres": "address1.1",
+				"addres": "423 Columbus Ave, San Francisco, CA 94133",
 				"location": [37.799800008502125, -122.4112719727914]
 			},
 			{
 				"name": "illy Caffe",
-				"addres": "address1.1",
+				"addres": "220 Montgomery St Ste. 148, San Francisco, CA 94104",
 				"location": [37.79206815455429, -122.40500633223677]
 			},
 			{
 				"name": "R Caffe",
-				"addres": "address1.1",
+				"addres": "614 Polk St, San Francisco, CA 94102",
 				"location": [37.78331797550752, -122.41728012126848]
 			},
 			{
@@ -69,5 +71,80 @@
 				"location": [37.79057594923993, -122.39977065999248]
 			}
 		]
+	}, 
+	"shopping": {
+		"logoUrl": "../shopping.svg",
+		"title": "Shopping",
+		"locations": [
+			{
+				"name": "Macy's San Francisco",
+				"addres": "447 Sutter St, San Francisco, CA 94108",
+				"location": [37.789738503832915, -122.41078375976568]
+			},
+			{
+				"name": "Crocker Galleria",
+				"addres": "50 Post St, San Francisco, CA 94104",
+				"location": [37.790416790398986, -122.40177153822499]
+			},
+			{
+				"name": "Japan Center",
+				"addres": "1737 Post St, San Francisco, CA 94115",
+				"location": [37.78678788482299, -122.42301463230977]
+			},
+			{
+				"name": "The Cannery",
+				"addres": "2801 Leavenworth St, San Francisco, CA 94133",
+				"location": [37.807880525000556, -122.41923808243072]
+			},
+			{
+				"name": "NorthPoint Centre",
+				"addres": "320 Bay St, San Francisco, CA 94133",
+				"location": [37.80767708778661, -122.4087667393073]
+			},
+			{
+				"name": "Metreon",
+				"addres": "135 4th St, San Francisco, CA 94103",
+				"location": [37.78509207333046, -122.39752291926672]
+			}
+		]
+	},
+
+	"recreation": {
+		"logoUrl": "../shopping.svg",
+		"title": "Recreation",
+		"locations": [
+			{
+				"name": "Betty Ong Rec Center",
+				"addres": "1199 Mason St, San Francisco, CA 94108",
+				"location": [37.795128120192565, -122.4110841738252]
+			},
+			{
+				"name": "Tenderloin Recreation Center",
+				"addres": "570 Ellis St, San Francisco, CA 94109",
+				"location": [37.78563214716485, -122.41082668178122]
+			},
+			{
+				"name": "Hamilton Recreation Center",
+				"addres": "1900 Geary Blvd, San Francisco, CA 94115",
+				"location": [37.78658179939642, -122.43400096747001]
+			},
+			{
+				"name": "Alta Plaza Park",
+				"addres": "Jackson St. &, Steiner St, San Francisco, CA 94115",
+				"location": [37.787124452327944, -122.43485927428343]
+			},
+			{
+				"name": "Eureka Valley Rec Center",
+				"addres": "100 Collingwood St, San Francisco, CA 94114",
+				"location": [37.76120832760888, -122.42842197256206]
+			},
+			{
+				"name": "Margaret S. Hayward Playground",
+				"addres": "1016 Laguna St, San Francisco, CA 94102",
+				"location": [37.781765580013456, -122.42301463963764]
+			}
+		]
 	}
+
+
 }

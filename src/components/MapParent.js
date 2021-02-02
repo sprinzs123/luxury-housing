@@ -58,7 +58,11 @@ function MapWrapper() {
 							setSelectedPlace(null);
 						}}
 					>
-						<h3>{selectedPlace.name}</h3>
+						<div>
+							<h5 className="green"><b>{selectedPlace.name}</b></h5>
+							<h6>{selectedPlace.addres}</h6>
+						</div>
+
 					</InfoWindow>
 				)}
 			</GoogleMap>
@@ -114,7 +118,7 @@ function MapWrapper() {
 					<div className="border-right">
 						<div
 							className="map-btn"
-							onClick={() => setPlace(placesData["food"])}
+							onClick={() => setPlace(placesData["shopping"])}
 						>
 							<FontAwesomeIcon icon={faTag} size="lg" />
 							<h5 className="ml-3">Shopping</h5>
@@ -123,7 +127,7 @@ function MapWrapper() {
 					<div className="pr-0">
 						<div
 							className="map-btn"
-							onClick={() => setPlace(placesData["food"])}
+							onClick={() => setPlace(placesData["recreation"])}
 						>
 							<FontAwesomeIcon icon={faBicycle} size="lg" />
 							<h5 className="ml-3">Recreation</h5>
@@ -132,7 +136,7 @@ function MapWrapper() {
 				</div>
 			</div>
 
-			{/* < Options data={placeCategory} logo={placesIcons[allPlaces.indexOf(placeCategory)]} /> */}
+			< Options data={placeCategory} />
 		</div>
 	);
 }
