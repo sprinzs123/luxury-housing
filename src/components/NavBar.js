@@ -44,12 +44,12 @@ class ShowNav extends Component {
 		const currentState = this.state.showModal
 		if (currentState === false) {
 			return <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" className="bi bi-justify" viewBox="0 0 16 16">
-			<path fillRule="evenodd" d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
-		  </svg>
+				<path fillRule="evenodd" d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z" />
+			</svg>
 		} else {
 			return <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" className="bi bi-x" viewBox="0 0 16 16">
-			<path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
-		  </svg>
+				<path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+			</svg>
 		}
 	}
 
@@ -62,29 +62,32 @@ class ShowNav extends Component {
 					id='nav-bar-all'
 					style={{ backgroundImage: `url(${this.props.bannerImg})` }}
 				>
-					<div className="nav-items">
-						<div className="log-nav">
+					<div className="nav-items d-flex justify-content-between">
+						<div className="log-nav d-flex align-items-center">
 							<h1><Link to='/'></Link>Logo</h1>
 						</div>
-						<div className="nav-links">
+						<div className="nav-links d-flex">
+							{/* nav links */}
 							<ul className="d-flex align-items-center all-links">
 								<li className="small-text"><Link to='/gallery'>Virtual Tours</Link></li>
 								<li className="small-text"><Link to='/contact'>Book Your Tour</Link></li>
 								<li className="small-text">(874) 204-1589</li>
 							</ul>
+							{/* nav boggle btn */}
+							<div className="nav-toggle d-flex align-item-center">
+								<ul className="nav-btn d-flex align-items-center">
+									<li className="lease-text mr-2">LEASE NOW</li>
+									<li
+										onClick={this.changeView}
+										className="toggle-btn"
+									>
+										{this.toggleBtn()}
+									</li>
+								</ul>
+							</div>
 						</div>
 					</div>
-					<div className="nav-toggle">
-						<ul className="nav-btn">
-							<li className="lease-text">LEASE NOW</li>
-							<li
-								onClick={this.changeView}
-								className="toggle-btn"
-							>
-								{this.toggleBtn()}
-							</li>
-						</ul>
-					</div>
+
 				</nav>
 				<div className="modal-parent">
 					<div className="nav-modal">
