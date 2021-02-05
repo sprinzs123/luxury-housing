@@ -7,7 +7,6 @@ class ShowNav extends Component {
 		super();
 		this.state = {
 			showModal: false,
-			toggleButton: "Y",
 		};
 	}
 
@@ -15,6 +14,7 @@ class ShowNav extends Component {
 	changeView = () => {
 		const toggleState = this.state.showModal;
 		const notNavBar = document.querySelector(".content");
+		console.log(notNavBar)
 		const modal = document.querySelector(".nav-modal");
 		const navbar = document.querySelector('#nav-bar-all');
 

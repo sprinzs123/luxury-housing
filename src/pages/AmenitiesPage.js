@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import BannerLogo from "../imgs/navBanner.jpg"
 import Footer from '../components/Footer'
-import ContactForm from '../components/Amenities'
+import Amenities from '../components/Amenities'
 import NavBar from '../components/NavBar'
 
 
@@ -11,7 +11,7 @@ export default class contact extends Component {
             <div>
                 < NavBar bannerImg = {BannerLogo}  />
                 <div className="content">
-                    < ContactForm />
+                    < Amenities />
                     < Footer />
                 </div>
             </div>

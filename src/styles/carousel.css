@@ -105,4 +105,9 @@
         background-image: url('../imgs/galery1.jpg'); 
         background-size: cover;
     }
+    .carousel-footer{
+        height: 10vh;
+    }
+
+
 }

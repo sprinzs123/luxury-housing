@@ -5,7 +5,7 @@ import '../src/styles/index.css'
 
 
 import Contact from './pages/Contact';
-import Amenities from './pages/AmenitiesPage';
+import AmenitiesPage from './pages/AmenitiesPage';
 import Gallery from './pages/GalleryPage'
 import Home from './pages/HomePage'
 import NearUs from './pages/NearUs'
@@ -19,8 +19,7 @@ function App() {
         <Router>
             <Route exact path='/' component={Home} />
             <Route exact path='/contact' component={Contact} />
-            <Route exact path='/amenities' component={Amenities} />
-            <Route exact path='/amenities' component={Amenities} />
+            <Route exact path='/amenities' component={AmenitiesPage} />
             <Route exact path='/neighborhood' component={NearUs} />
         </Router>
     )
