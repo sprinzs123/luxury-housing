@@ -18,7 +18,7 @@ function Footer() {
                   <div className=" btn-green"><Link to='/contact'>BOOK YOUR TOUR</Link></div>
                 </div>
                 <div className="btn-parent">
-                  <div className="btn-green"><Link to='/floorplan'></Link>FIND YOUR HOME</div>
+                  <div className="btn-green"><Link to='/neighborhood'>FIND YOUR HOME</Link></div>
                 </div>
               </div>
             </div>

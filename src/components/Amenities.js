@@ -1,4 +1,6 @@
 import "../styles/amenities.css";
+import { Link } from "react-router-dom";
+
 import React, { Component } from "react";
 import pic1 from "../imgs/galery2.jpg";
 import pic2 from "../imgs/galery3.jpg";

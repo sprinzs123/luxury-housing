@@ -64,19 +64,19 @@ class ShowNav extends Component {
 				>
 					<div className="nav-items d-flex justify-content-between">
 						<div className="log-nav d-flex align-items-center">
-							<h1><Link to='/'></Link>Logo</h1>
+							<h1><Link to='/'>Logo</Link></h1>
 						</div>
 						<div className="nav-links d-flex">
 							{/* nav links */}
 							<ul className="d-flex align-items-center all-links">
 								<li className="small-text"><Link to='/gallery'>Virtual Tours</Link></li>
-								<li className="small-text"><Link to='/contact'>Book Your Tour</Link></li>
+								<li className="small-text"><Link to='/neighborhood'>Book Your Tour</Link></li>
 								<li className="small-text">(874) 204-1589</li>
 							</ul>
 							{/* nav boggle btn */}
 							<div className="nav-toggle d-flex align-item-center">
 								<ul className="nav-btn d-flex align-items-center">
-									<li className="lease-text mr-2">LEASE NOW</li>
+									<li className="lease-text mr-2"><Link to='/contact'>LEASE NOW</Link></li>
 									<li
 										onClick={this.changeView}
 										className="toggle-btn"
@@ -100,7 +100,7 @@ class ShowNav extends Component {
 									<Link to="/amenities">Amenities</Link>
 								</li>
 								<li>
-									<Link to="/gallery">Gallery</Link>
+									<Link to="/neighborhood">Neighborhood</Link>
 								</li>
 								<li>
 									<Link to="/contact">Contact</Link>

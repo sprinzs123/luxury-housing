@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import "../styles/aboutUs.css";
+import { Link } from "react-router-dom";
 
 
 
@@ -42,10 +43,10 @@ class AboutUs extends Component {
                             </div>
                             <div className='welcome-btns btn-row'>
                                 <div className='btn-parent'>
-                                    <div className='btn-green'>VIEW AMENITIES</div>
+                                    <div className='btn-green'><Link to='/amenities'>VIEW AMENITIES</Link></div>
                                 </div>
                                 <div className='btn-parent'>
-                                    <div className='btn-green'>EXPLORE THE NEIGHBORHOOD</div>
+                                    <div className='btn-green'><Link to='/neighborhood'>EXPLORE THE NEIGHBORHOOD</Link></div>
                                 </div>
                             </div>
                         </div>

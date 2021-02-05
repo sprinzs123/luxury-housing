@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import Slider from "react-slick";
 import NavBar from '../components/NavBar'
 
@@ -79,20 +80,27 @@ export default class carousel extends Component {
                     <div className='carousel-footer-parent'>
                         <div className='carousel-footer footer-1 border-right'>
                             <div className="under-carousel-text">
-                                <h5>MAKE IT YOUR HOME</h5>
-                                <h6>Surround with the Best</h6>
+                                <Link to='/neighborhood'>
+                                    <h5>MAKE IT YOUR HOME</h5>
+                                    <h6>Surround with the Best</h6>
+                                </Link>
+
                             </div>
                         </div>
                         <div className='carousel-footer footer-2 border-right'>
                             <div className="under-carousel-text">
-                                <h5>VIEW AMENITIES</h5>
-                                <h6>Indulgent Details</h6>
+                                <Link to='/amenities'>
+                                    <h5>VIEW AMENITIES</h5>
+                                    <h6>Indulgent Details</h6>
+                                </Link>
                             </div>
-                        </div>    
+                        </div>
                         <div className='carousel-footer footer-3 border-right'>
                             <div className="under-carousel-text">
-                                <h5>VIEW THE GALLERY</h5>
-                                <h6>Luxury Living</h6>
+                            <Link to='/contact'>
+                                    <h5>CONTACT US</h5>
+                                    <h6>Indulgent Details</h6>
+                                </Link>
                             </div>
                         </div>
 
