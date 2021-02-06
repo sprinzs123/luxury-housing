@@ -41,33 +41,39 @@ export default class carousel extends Component {
             <div className='home-slider'>
                 <div className='all-carousel'>
                     <Slider {...settings}>
-                        <div>
+                        <div className="">
                             <div className="carousel-parent">
                                 <img src={img1} />
                                 <div className="banner-text">
                                     <h4>Make It Your Home</h4>
                                     <h1>Living Begins Here</h1>
-                                    <div className="btn-green">CHECK AVAILABILITY</div>
+                                    <Link to='/contact'>
+                                        <div className="btn-green banner-btn">CHECK AVAILABILITY</div>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
-                        <div>
+                        <div className="carousel-one-div">
                             <div className="carousel-parent">
                                 <img src={img2} />
                                 <div className="banner-text">
                                     <h4>Make It Your Home</h4>
                                     <h1>Surround with the Best</h1>
-                                    <div className="btn-green">Style Everywhere You Look</div>
+                                    <Link to='/neighborhood'>
+                                        <div className="btn-green banner-btn">Style Everywhere You Look</div>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
-                        <div>
+                        <div className="carousel-one-div">
                             <div className="carousel-parent">
                                 <img src={img3} />
                                 <div className="banner-text">
                                     <h4>Make It Your Home</h4>
                                     <h1>Find Your Home Today</h1>
-                                    <div className="btn-green">Luxury for a Lifetime</div>
+                                    <Link to='/amenities'>
+                                    <div className="btn-green banner-btn">Luxury for a Lifetime</div>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -79,29 +85,33 @@ export default class carousel extends Component {
                 <div className='under-carousel content'>
                     <div className='carousel-footer-parent'>
                         <div className='carousel-footer footer-1 border-right'>
-                            <div className="under-carousel-text">
-                                <Link to='/neighborhood'>
+                            <Link to='/neighborhood'>
+                                <div className="under-carousel-text">
                                     <h5>MAKE IT YOUR HOME</h5>
                                     <h6>Surround with the Best</h6>
-                                </Link>
-
-                            </div>
+                                </div>
+                            </Link>
                         </div>
                         <div className='carousel-footer footer-2 border-right'>
-                            <div className="under-carousel-text">
-                                <Link to='/amenities'>
+                            <Link to='/amenities'>
+
+                                <div className="under-carousel-text">
+
                                     <h5>VIEW AMENITIES</h5>
                                     <h6>Indulgent Details</h6>
-                                </Link>
-                            </div>
+                                </div>
+                            </Link>
+
                         </div>
                         <div className='carousel-footer footer-3 border-right'>
-                            <div className="under-carousel-text">
                             <Link to='/contact'>
+                                <div className="under-carousel-text">
+
                                     <h5>CONTACT US</h5>
                                     <h6>Indulgent Details</h6>
-                                </Link>
-                            </div>
+                                </div>
+                            </Link>
+
                         </div>
 
                     </div>
