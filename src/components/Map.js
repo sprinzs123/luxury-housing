@@ -36,5 +36,7 @@ export default function App(props) {
                 />
         </div>
     )
-    
 }
+
+
+// stand alone version of map

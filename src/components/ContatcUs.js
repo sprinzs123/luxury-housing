@@ -132,7 +132,7 @@ class ContactForm extends Component {
     }
     
         showErrors = () => {
-		if(this.state.error.length !=0){
+		if(this.state.error.length !==0){
 			        return this.state.error.map(error => 
             <li key={error} className='text-danger'>{error}</li>
             )
@@ -149,7 +149,7 @@ class ContactForm extends Component {
         this.setState({
             error : foundErrors
 		})
-		if(foundErrors.length == 0){
+		if(foundErrors.length === 0){
 			this.setState({
 				firstLabel: "First Name",
 				lastLabel: "Last Name",

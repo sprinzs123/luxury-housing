@@ -43,7 +43,7 @@ export default class carousel extends Component {
                     <Slider {...settings}>
                         <div className="">
                             <div className="carousel-parent">
-                                <img src={img1} />
+                                <img src={img1} alt=""/>
                                 <div className="banner-text">
                                     <h4>Make It Your Home</h4>
                                     <h1>Living Begins Here</h1>
@@ -55,7 +55,7 @@ export default class carousel extends Component {
                         </div>
                         <div className="carousel-one-div">
                             <div className="carousel-parent">
-                                <img src={img2} />
+                                <img src={img2} alt=""/>
                                 <div className="banner-text">
                                     <h4>Make It Your Home</h4>
                                     <h1>Surround with the Best</h1>
@@ -67,7 +67,7 @@ export default class carousel extends Component {
                         </div>
                         <div className="carousel-one-div">
                             <div className="carousel-parent">
-                                <img src={img3} />
+                                <img src={img3} alt=""/>
                                 <div className="banner-text">
                                     <h4>Make It Your Home</h4>
                                     <h1>Find Your Home Today</h1>
