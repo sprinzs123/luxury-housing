@@ -1,6 +1,6 @@
 {
 	"food": {
-		"logoUrl": "../fork.svg",
+		"logoUrl": "fork.svg",
 		"title": "Restaurant",
 		"locations": [
 			{
@@ -37,7 +37,7 @@
 	},
 
 	"coffee": {
-		"logoUrl": "../coffee.svg",
+		"logoUrl": "coffee.svg",
 		"title": "Coffee",
 		"locations": [
 			{
@@ -73,7 +73,7 @@
 		]
 	}, 
 	"shopping": {
-		"logoUrl": "../shopping.svg",
+		"logoUrl": "shopping.svg",
 		"title": "Shopping",
 		"locations": [
 			{
@@ -110,7 +110,7 @@
 	},
 
 	"recreation": {
-		"logoUrl": "../bicycle.svg",
+		"logoUrl": "bicycle.svg",
 		"title": "Recreation",
 		"locations": [
 			{

@@ -108,3 +108,10 @@ li{
     background-color: #2f2e3d;
 }
 
+a:hover{
+    color: white;
+}
+
+.toggle-btn:hover{
+    cursor: pointer;
+}
