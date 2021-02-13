@@ -4,6 +4,11 @@
     padding-bottom: 2em;
 }
 
+.contact-page{
+    background-color: #f7f7f7;
+
+}
+
 .form-row{
     position: relative;
     flex: 1;
@@ -58,3 +63,83 @@ textarea:focus{
 textarea{
     height: 15em;
 }
+
+.form-header{
+    text-align: center;
+    background-color: #eaeaea;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border: 1px solid #c5c5c5;
+}
+
+.contact-fields{
+    background-color: #f2f2f2;
+    padding: 2em;
+    border-bottom: 1px solid #c5c5c5;
+    border-left:  1px solid #c5c5c5;
+    border-right:  1px solid #c5c5c5;
+}
+
+.office-hours-parent{
+    padding-top: 2.5em;
+
+}
+
+
+.office-hours-inner{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #c5c5c5;
+    background-color: #f2f2f2;
+}
+
+.office-hours-inner div{
+    padding: 2em;
+}
+
+.office-text{
+    flex: 1;
+    background-color: #303030;
+    color: white;
+    align-items: center;
+    display: flex;
+
+}
+
+.office-text h4{
+    margin: 0;
+}
+
+.office-is-open{
+    flex: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* office hours media query */
+@media(max-width:900px){
+    .office-hours-inner{
+        display: inline;
+    }
+
+    .office-text{
+        justify-content: center;
+        padding: 1em;
+    }
+
+    .office-is-open{
+        background-color: #f2f2f2;
+        border-bottom: 1px solid #c5c5c5;
+        border-left:  1px solid #c5c5c5;
+        border-right:  1px solid #c5c5c5;
+    }
+
+    .office-hours-inner{
+        border: none;
+    }
+
+
+
+}
+

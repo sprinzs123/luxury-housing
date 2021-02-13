@@ -25,7 +25,7 @@ class ContactForm extends Component {
 		};
 	}
 
-    // make label disappear when start typing
+	// make label disappear when start typing
 	changeFirst = (e) => {
 		const newValue = e.target.value;
 		this.setState({
@@ -107,178 +107,203 @@ class ContactForm extends Component {
 	};
 
 	selectPlan = (e) => {
-		console.log(e)
-	}
+		console.log(e);
+	};
 
-    // for validation return list of errors found that is going to be updated to state
+	// for validation return list of errors found that is going to be updated to state
 	checkForErrors = () => {
-        let errors = []
-        if(!this.state.firstName){
-            errors.push('Invalid Name')
-        }
-
-        if(!this.state.lastName){
-            errors.push('Invalid Last Name')
-        }
-
-        if(!this.state.email.includes('@')){
-            errors.push('Invalid Email')
-        }
-
-        if(!this.state.phone){
-            errors.push('Invalid Phone Number')
-        }
-        return errors
-    }
-    
-        showErrors = () => {
-		if(this.state.error.length !==0){
-			        return this.state.error.map(error => 
-            <li key={error} className='text-danger'>{error}</li>
-            )
+		let errors = [];
+		if (!this.state.firstName) {
+			errors.push("Invalid Name");
 		}
 
-	}
-	
+		if (!this.state.lastName) {
+			errors.push("Invalid Last Name");
+		}
 
+		if (!this.state.email.includes("@")) {
+			errors.push("Invalid Email");
+		}
 
+		if (!this.state.phone) {
+			errors.push("Invalid Phone Number");
+		}
+		return errors;
+	};
+
+	showErrors = () => {
+		if (this.state.error.length !== 0) {
+			return this.state.error.map((error) => (
+				<li key={error} className="text-danger">
+					{error}
+				</li>
+			));
+		}
+	};
 
 	submitForm = (e) => {
-        e.preventDefault();
-        let foundErrors = this.checkForErrors()     
-        this.setState({
-            error : foundErrors
-		})
-		if(foundErrors.length === 0){
+		e.preventDefault();
+		let foundErrors = this.checkForErrors();
+		this.setState({
+			error: foundErrors,
+		});
+		if (foundErrors.length === 0) {
 			this.setState({
 				firstLabel: "First Name",
 				lastLabel: "Last Name",
 				phoneLabel: "Phone",
 				emailLabel: "Email",
 				dateLabel: "Desired Move-in Date",
-			})
-			let allInputs = document.querySelectorAll('input')
+			});
+			let allInputs = document.querySelectorAll("input");
 			allInputs.forEach((input) => {
-				input.value = ''
-			})
-			let textArea = document.querySelector('textarea')
-			textArea.value = ''
-
+				input.value = "";
+			});
+			let textArea = document.querySelector("textarea");
+			textArea.value = "";
 		}
 	};
 
 	render() {
 		return (
-			<div className="contact-form">
-				<form>
-					<div className="container">
-						<div className='form-messages'>
-						<ul className=" error-message pl-0">
-                            {this.showErrors()}
-                        </ul>
+			<div className="contact-page">
+				{/* office hours div */}
+				<div className="office-hours-parent container">
+					<div className="office-hours-inner">
+						<div className="office-text">
+							<h4><b>Office Hours</b></h4>
 						</div>
-
-						<div className="input-row row d-flex">
-							<div className="col-sm-6">
-								<div className="form-row">
-									<label className="input-label">
-										{this.state.firstLabel}
-									</label>
-									<input
-										onChange={this.changeFirst}
-										className="form-input"
-										id="move"
-									></input>
-								</div>
-							</div>
-							<div className="col-sm-6">
-								<div className="form-row">
-									<label className="input-label">
-										{this.state.lastLabel}
-									</label>
-									<input
-                                    	onChange={this.changeLast}
-										className="form-input"
-										id="move"
-									></input>
-								</div>
-							</div>{" "}
-						</div>
-						<div className="input-row row d-flex">
-							<div className="col-sm-6">
-								<div className="form-row">
-									<label className="input-label">
-										{this.state.phoneLabel}
-									</label>
-									<input
-										onChange={this.changePhone}                                        
-										className="form-input"
-										id="move"
-									></input>
-								</div>
-							</div>
-							<div className="col-sm-6">
-								<div className="form-row">
-									<label className="input-label">
-										{this.state.emailLabel}
-									</label>
-									<input
-                                    	onChange={this.changeEmail}
-										className="form-input"
-										id="move"
-									></input>
-								</div>
-							</div>{" "}
-						</div>
-						<div className="input-row row d-flex">
-							<div className="col-sm-6">
-								<div className="form-row">
-									<label className="input-label">
-										{this.state.dateLabel}
-									</label>
-									<select
-										className="form-input dropdown"
-										id="floor"									>
-										<option>Select a Floorplan</option>
-										<option>Studio/1 Bath</option>
-										<option>1 Bed/1 Bath</option>
-										<option>2 Bed/1 Bath</option>
-										<option>3 Bed/2 Bath</option>
-									</select>
-								</div>
-							</div>
-							<div className="col-sm-6">
-								<div className="form-row">
-									<label className="input-label">
-                                        {this.state.dateLabel}
-									</label>
-									<input
-                                    	onChange={this.changeDate}
-										className="form-input"
-										id="move"
-									></input>
-								</div>
-							</div>
-						</div>
-						<div className="large-area row mb-3">
-							<label className="input-label">
-								Desired Move-in Date
-							</label>
-							<textarea
-								id="comments"
-								className=" col-12 question"
-							></textarea>
-						</div>
-						<div className="d-flex justify-content-center">
-							<button
-								onClick={this.submitForm}
-								className="btn-green"
-							>
-								SUBMIT FORM
-							</button>
+						<div className="office-is-open">
+							<ul className="office-days">
+								<li>Monday-Friday</li>
+								<li>Saturday</li>
+							</ul>
+							<ul className="office-hours">
+								<li>9:00 AM - 6:00 PM</li>
+								<li>10:00 AM - 5:00 PM</li>
+							</ul>
 						</div>
 					</div>
-				</form>
+				</div>
+				<div className="contact-form">
+					<form>
+						<div className="container">
+							<div className="form-header">
+								<h3>Get in Touch!</h3>
+							</div>
+							{/* contact form goes here */}
+							<div className="contact-fields">
+								<div className="form-messages">
+									<ul className=" error-message pl-0">
+										{this.showErrors()}
+									</ul>
+								</div>
+								<div className="input-row row d-flex">
+									<div className="col-sm-6">
+										<div className="form-row">
+											<label className="input-label">
+												{this.state.firstLabel}
+											</label>
+											<input
+												onChange={this.changeFirst}
+												className="form-input"
+												id="move"
+											></input>
+										</div>
+									</div>
+									<div className="col-sm-6">
+										<div className="form-row">
+											<label className="input-label">
+												{this.state.lastLabel}
+											</label>
+											<input
+												onChange={this.changeLast}
+												className="form-input"
+												id="move"
+											></input>
+										</div>
+									</div>{" "}
+								</div>
+								<div className="input-row row d-flex">
+									<div className="col-sm-6">
+										<div className="form-row">
+											<label className="input-label">
+												{this.state.phoneLabel}
+											</label>
+											<input
+												onChange={this.changePhone}
+												className="form-input"
+												id="move"
+											></input>
+										</div>
+									</div>
+									<div className="col-sm-6">
+										<div className="form-row">
+											<label className="input-label">
+												{this.state.emailLabel}
+											</label>
+											<input
+												onChange={this.changeEmail}
+												className="form-input"
+												id="move"
+											></input>
+										</div>
+									</div>{" "}
+								</div>
+								<div className="input-row row d-flex">
+									<div className="col-sm-6">
+										<div className="form-row">
+											<label className="input-label">
+												{this.state.dateLabel}
+											</label>
+											<select
+												className="form-input dropdown"
+												id="floor"
+											>
+												<option>
+													Select a Floorplan
+												</option>
+												<option>Studio/1 Bath</option>
+												<option>1 Bed/1 Bath</option>
+												<option>2 Bed/1 Bath</option>
+												<option>3 Bed/2 Bath</option>
+											</select>
+										</div>
+									</div>
+									<div className="col-sm-6">
+										<div className="form-row">
+											<label className="input-label">
+												{this.state.dateLabel}
+											</label>
+											<input
+												onChange={this.changeDate}
+												className="form-input"
+												id="move"
+											></input>
+										</div>
+									</div>
+								</div>
+								<div className="large-area row mb-3">
+									<label className="input-label">
+										Desired Move-in Date
+									</label>
+									<textarea
+										id="comments"
+										className=" col-12 question"
+									></textarea>
+								</div>
+								<div className="d-flex justify-content-center">
+									<button
+										onClick={this.submitForm}
+										className="btn-green"
+									>
+										SEND IT!
+									</button>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
 			</div>
 		);
 	}
