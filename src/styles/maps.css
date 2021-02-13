@@ -85,5 +85,8 @@
       .location-list:last-child {          
         border-bottom: solid 1px rgb(181, 181, 181);
       }
+}
 
+.map-div{
+    height: 400px;
 }

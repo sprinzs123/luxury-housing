@@ -1,6 +1,8 @@
 import React from "react";
 import "../styles/footer.css";
 import { Link } from "react-router-dom";
+import Zoom  from 'react-reveal/Zoom';
+
 
 
 function Footer() {
@@ -8,6 +10,7 @@ function Footer() {
     <div>
       <div className="footer-main grey-1" data-aos="zoom-in">
         <div className="container">
+          <Zoom right>
           <div className="smaller-footer green row">
             <div className="col-lg-6">
               <h3>Life is better here</h3>
@@ -23,6 +26,8 @@ function Footer() {
               </div>
             </div>
           </div>
+          </Zoom>
+
         </div>
       </div>
 

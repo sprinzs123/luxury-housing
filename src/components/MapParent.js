@@ -13,13 +13,14 @@ import {
 	faBicycle,
 	faUtensils,
 	faTag,
-	faHome
 } from "@fortawesome/free-solid-svg-icons";
 
 import Options from "../components/UnderMap";
 import mapStyles from "../data/mapStyles";
 import placesData from "../data/placesData.json";
 import "../styles/maps.css";
+import Fade from 'react-reveal/Fade';
+
 
 function MapWrapper() {
 	const [placeCategory, setPlace] = useState(placesData["food"]);
@@ -54,7 +55,7 @@ function MapWrapper() {
 						lat: 37.78982588149873,
 						lng: -122.41782149701461,
 					}}
-					
+
 				/>
 				{selectedPlace && (
 					<InfoWindow
@@ -95,59 +96,68 @@ function MapWrapper() {
 	return (
 		<div>
 			<div>
-			<div className='page-description container'>
-				Enjoy our San Francisco apartments for rent that are perfectly located near Polk Street, Lafayette Park and more. We're centrally located in the city with great shopping & dining nearby as well. Schedule a tour today and see why our Etta homes are the home for you!
+				<div className='page-description container'>
+					Enjoy our San Francisco apartments for rent that are perfectly located near Polk Street, Lafayette Park and more. We're centrally located in the city with great shopping & dining nearby as well. Schedule a tour today and see why our Etta homes are the home for you!
 			</div>
-				<WrappedMap
-					googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${process.env.REACT_APP_GOOGLE_KEY}`}
-					loadingElement={<div style={{ height: `100%` }} />}
-					containerElement={<div style={{ height: `400px` }} />}
-					mapElement={<div style={{ height: `100%` }} />}
-				/>
-			</div>
+				<Fade left>
+					<div className='map-div'>
+					<WrappedMap
+						googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${process.env.REACT_APP_GOOGLE_KEY}`}
+						loadingElement={<div style={{ height: `100%` }} />}
+						containerElement={<div style={{ height: `400px` }} />}
+						mapElement={<div style={{ height: `100%` }} />}
+					/>
+					</div>
 
-			<div className="maps-btns">
-				<div className="maps-btn-parent">
-					<div className="border-right">
-						<div
-							className="map-btn"
-							onClick={() => setPlace(placesData["food"])}
-						>
-							<FontAwesomeIcon icon={faUtensils} size="lg" />
-							<h5 className="ml-3">Restaurants </h5>
+				</Fade>
+
+			</div>
+			<Fade right>
+				<div className="maps-btns">
+					<div className="maps-btn-parent">
+						<div className="border-right">
+							<div
+								className="map-btn"
+								onClick={() => setPlace(placesData["food"])}
+							>
+								<FontAwesomeIcon icon={faUtensils} size="lg" />
+								<h5 className="ml-3">Restaurants </h5>
+							</div>
 						</div>
-					</div>
-					<div className="border-right">
-						<div
-							className="map-btn"
-							onClick={() => setPlace(placesData["coffee"])}
-						>
-							<FontAwesomeIcon icon={faCoffee} size="lg" />
-							<h5 className="ml-3">Coffee</h5>
+						<div className="border-right">
+							<div
+								className="map-btn"
+								onClick={() => setPlace(placesData["coffee"])}
+							>
+								<FontAwesomeIcon icon={faCoffee} size="lg" />
+								<h5 className="ml-3">Coffee</h5>
+							</div>
 						</div>
-					</div>
-					<div className="border-right">
-						<div
-							className="map-btn"
-							onClick={() => setPlace(placesData["shopping"])}
-						>
-							<FontAwesomeIcon icon={faTag} size="lg" />
-							<h5 className="ml-3">Shopping</h5>
+						<div className="border-right">
+							<div
+								className="map-btn"
+								onClick={() => setPlace(placesData["shopping"])}
+							>
+								<FontAwesomeIcon icon={faTag} size="lg" />
+								<h5 className="ml-3">Shopping</h5>
+							</div>
 						</div>
-					</div>
-					<div className="pr-0">
-						<div
-							className="map-btn"
-							onClick={() => setPlace(placesData["recreation"])}
-						>
-							<FontAwesomeIcon icon={faBicycle} size="lg" />
-							<h5 className="ml-3">Recreation</h5>
+						<div className="pr-0">
+							<div
+								className="map-btn"
+								onClick={() => setPlace(placesData["recreation"])}
+							>
+								<FontAwesomeIcon icon={faBicycle} size="lg" />
+								<h5 className="ml-3">Recreation</h5>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
+			</Fade>
 
-			< Options data={placeCategory} />
+			<Fade bottom>
+				< Options data={placeCategory} />
+			</Fade>
 		</div>
 	);
 }

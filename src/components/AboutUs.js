@@ -1,6 +1,8 @@
 import React, { Component } from "react"
 import "../styles/aboutUs.css";
 import { Link } from "react-router-dom";
+import Fade  from 'react-reveal/Fade';
+
 
 
 
@@ -33,6 +35,7 @@ class AboutUs extends Component {
         return (
             <div className='welcome-div'>
                 <div className='inner-welcome container'>
+                    <Fade right> 
                     <div className='welcome-items row d-flex justify-content-center'>
                         <div className='col-sm-3'>
                             <h3>Be Your Own Classic</h3>
@@ -43,7 +46,7 @@ class AboutUs extends Component {
                             </div>
                             <div className='welcome-btns btn-row'>
                                 <div className='btn-parent'>
-                                    <div className='btn-green'><Link to='/amenities'>VIEW AMENITIES</Link></div>
+                                    <div className='btn-green animate__animated animate__bounce'><Link to='/amenities'>VIEW AMENITIES</Link></div>
                                 </div>
                                 <div className='btn-parent'>
                                     <div className='btn-green'><Link to='/neighborhood'>EXPLORE THE NEIGHBORHOOD</Link></div>
@@ -51,6 +54,8 @@ class AboutUs extends Component {
                             </div>
                         </div>
                     </div>
+                    </Fade>
+
                 </div>
             </div>
 

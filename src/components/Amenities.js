@@ -1,4 +1,6 @@
 import "../styles/amenities.css";
+import Fade from 'react-reveal/Fade';
+
 
 import React, { Component } from "react";
 import pic1 from "../imgs/galery2.jpg";
@@ -50,66 +52,72 @@ export default class Amenities extends Component {
 		return (
 			<div className="container mt-4">
 				<div className="all-amenities">
-				<div className='page-description'>
-					Enjoy our San Francisco apartments for rent that are perfectly located near Polk Street, Lafayette Park and more. We're centrally located in the city with great shopping & dining nearby as well. Schedule a tour today and see why our homes are the home for you!
+					<div className='page-description'>
+						Enjoy our San Francisco apartments for rent that are perfectly located near Polk Street, Lafayette Park and more. We're centrally located in the city with great shopping & dining nearby as well. Schedule a tour today and see why our homes are the home for you!
 				</div>
-					<div className="show-amenities-pic">
-						<div className="amenities-header">
-							<div className="amenity-img">
-								<img src={pic1} alt="img" />
-								
-							</div>
+					<Fade left>
+						<div className="show-amenities-pic">
+							<div className="amenities-header">
+								<div className="amenity-img">
+									<img src={pic1} alt="img" />
 
-							<div className="amenity-text second-item">
-								<h3 className="green">Community Amenities</h3>
+								</div>
+
+								<div className="amenity-text second-item">
+									<h3 className="green">Community Amenities</h3>
+								</div>
 							</div>
 						</div>
-					</div>
-					<div className="show-amenities">
-						<ul className="amenities-items">
-							<li className="first-item">
-								Indoor/Outdoor Lounge
+						<div className="show-amenities">
+							<ul className="amenities-items">
+								<li className="first-item">
+									Indoor/Outdoor Lounge
 							</li>
-							<li className="first-item">Fitness Center</li>
-							<li className="first-item">Conference Room</li>
-							<li className="first-item">
-								12th Floor Outdoor Seating Areas
+								<li className="first-item">Fitness Center</li>
+								<li className="first-item">Conference Room</li>
+								<li className="first-item">
+									12th Floor Outdoor Seating Areas
 							</li>
-							<li className="second-item">
-								Barbeque/Picnic Area
+								<li className="second-item">
+									Barbeque/Picnic Area
 							</li>
-							<li className="second-item">Dog Run </li>
-							<li className="second-item">Prime location</li>
-							<li className="second-item">
-								24-Hour Emergency Maintenance
+								<li className="second-item">Dog Run </li>
+								<li className="second-item">Prime location</li>
+								<li className="second-item">
+									24-Hour Emergency Maintenance
 							</li>
-						</ul>
-					</div>
-					<div className="hidden-amenities height-0">
-						<ul className="amenities-items">
-							<li className="first-item">Bike Parking</li>
-							<li className="first-item">Package Lockers</li>
-							<li className="first-item">
-								Apartment Parking (w/ Fee)
+							</ul>
+						</div>
+
+						<div className="hidden-amenities height-0">
+							<ul className="amenities-items">
+								<li className="first-item">Bike Parking</li>
+								<li className="first-item">Package Lockers</li>
+								<li className="first-item">
+									Apartment Parking (w/ Fee)
 							</li>
 
-							<li className="second-item">
-								Online Payments Accepted
+								<li className="second-item">
+									Online Payments Accepted
 							</li>
-							<li className="second-item">EV Chargers on Site</li>
-							<li className="second-item">
-								Indoor/Outdoor Lounge
+								<li className="second-item">EV Chargers on Site</li>
+								<li className="second-item">
+									Indoor/Outdoor Lounge
 							</li>
-						</ul>
-					</div>
-					<div className="d-flex justify-content-center">
-						<button
-							onClick={this.btnToggle}
-							className="btn-green mt-4"
-						>
-							{this.state.btnOne}
-						</button>
-					</div>
+							</ul>
+						</div>
+						<div className="d-flex justify-content-center">
+							<button
+								onClick={this.btnToggle}
+								className="btn-green mt-4"
+							>
+								{this.state.btnOne}
+							</button>
+						</div>
+					</Fade>
+
+
+
 				</div>
 				{/* new amenities */}
 				<div className="all-amenities">
