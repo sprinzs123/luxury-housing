@@ -115,3 +115,8 @@ a:hover{
 .toggle-btn:hover{
     cursor: pointer;
 }
+
+.bi-building{
+    height: 50px;
+    width: 50px;
+}

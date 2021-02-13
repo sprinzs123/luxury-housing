@@ -50,11 +50,16 @@ export default class Amenities extends Component {
 		return (
 			<div className="container mt-4">
 				<div className="all-amenities">
+				<div className='page-description'>
+					Enjoy our San Francisco apartments for rent that are perfectly located near Polk Street, Lafayette Park and more. We're centrally located in the city with great shopping & dining nearby as well. Schedule a tour today and see why our homes are the home for you!
+				</div>
 					<div className="show-amenities-pic">
 						<div className="amenities-header">
 							<div className="amenity-img">
 								<img src={pic1} alt="img" />
+								
 							</div>
+
 							<div className="amenity-text second-item">
 								<h3 className="green">Community Amenities</h3>
 							</div>

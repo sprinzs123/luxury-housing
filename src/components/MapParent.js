@@ -95,6 +95,9 @@ function MapWrapper() {
 	return (
 		<div>
 			<div>
+			<div className='page-description container'>
+				Enjoy our San Francisco apartments for rent that are perfectly located near Polk Street, Lafayette Park and more. We're centrally located in the city with great shopping & dining nearby as well. Schedule a tour today and see why our Etta homes are the home for you!
+			</div>
 				<WrappedMap
 					googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${process.env.REACT_APP_GOOGLE_KEY}`}
 					loadingElement={<div style={{ height: `100%` }} />}

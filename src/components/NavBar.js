@@ -64,7 +64,7 @@ class ShowNav extends Component {
 				>
 					<div className="nav-items d-flex justify-content-between">
 						<div className="log-nav d-flex align-items-center">
-							<h1><Link to='/'>
+							<Link to='/'>
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									width="30"
@@ -78,10 +78,9 @@ class ShowNav extends Component {
 									/>{" "}
 									<path d="M2 11h1v1H2v-1zm2 0h1v1H4v-1zm-2 2h1v1H2v-1zm2 0h1v1H4v-1zm4-4h1v1H8V9zm2 0h1v1h-1V9zm-2 2h1v1H8v-1zm2 0h1v1h-1v-1zm2-2h1v1h-1V9zm0 2h1v1h-1v-1zM8 7h1v1H8V7zm2 0h1v1h-1V7zm2 0h1v1h-1V7zM8 5h1v1H8V5zm2 0h1v1h-1V5zm2 0h1v1h-1V5zm0-2h1v1h-1V3z" />
 								</svg>
-							</Link></h1>
+							</Link>
 						</div>
 						<div className="nav-links d-flex">
-							{/* nav links */}
 							<ul className="d-flex align-items-center all-links">
 								<li className="small-text"><Link to='/gallery'>Virtual Tours</Link></li>
 								<li className="small-text"><Link to='/neighborhood'>Book Your Tour</Link></li>

@@ -6,20 +6,20 @@ a{
   color: white;
 }
 
-
-
 :root{
   --mainGreen: #7cdc66;
   --greyLight: #3a3947;
   --greyDark: #2f2e3d;
   --greyLight: rgb(95, 95, 95);
-
 }
 
 .small-text{
   font-size: 12px;
   flex-wrap: nowrap;
+}
 
+p{
+  color: var(--greyLight);
 }
 
 .green{
@@ -78,4 +78,11 @@ a{
 
 .svg-title{
   fill:green
+}
+
+.page-description{
+  margin-top: 2em;
+  margin-bottom: 2em;
+  color: var(--greyLight);
+  text-align: center;
 }

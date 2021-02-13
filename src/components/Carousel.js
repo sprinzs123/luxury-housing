@@ -106,7 +106,6 @@ export default class carousel extends Component {
                         <div className='carousel-footer footer-3 border-right'>
                             <Link to='/contact'>
                                 <div className="under-carousel-text">
-
                                     <h5>CONTACT US</h5>
                                     <h6>Indulgent Details</h6>
                                 </div>
