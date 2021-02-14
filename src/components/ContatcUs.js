@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "../styles/contactUs.css";
+import MapDirections from "../components/MapDirections"
 
 class ContactForm extends Component {
 	constructor() {
@@ -167,6 +168,8 @@ class ContactForm extends Component {
 	render() {
 		return (
 			<div className="contact-page">
+				{/* info with directions */}
+				<MapDirections/>
 				{/* office hours div */}
 				<div className="office-hours-parent container">
 					<div className="office-hours-inner">
