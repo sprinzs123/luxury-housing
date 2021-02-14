@@ -122,6 +122,11 @@ textarea{
 
 
 /* contact us with directions styles */
+.directions-parent{
+    padding-top: 2.5em;
+}
+
+
 .contact-directions{
     color: rgb(95, 95, 95);
     display: flex;
@@ -139,7 +144,6 @@ textarea{
     flex: 1;
     margin: 0;
     margin-right: 1.5em;
-
 }
 
 .border-bot{
@@ -187,6 +191,21 @@ textarea{
     transform:translateY(10px);
 }
 
+/* directions contact media query */
+@media(max-width: 798px){
+    .contact-directions{
+        display: inline;
+    }
+    .contact-details, .map-banner{
+        margin: 0;
+    }
+
+    .direction-btn{
+        padding-top: 1.5em;
+        padding-bottom: 1.5em;
+    }
+}
+
 
 
 /* office hours media query */
@@ -210,5 +229,6 @@ textarea{
     .office-hours-inner{
         border: none;
     }
+
 }
 

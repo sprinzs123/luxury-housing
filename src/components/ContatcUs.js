@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import "../styles/contactUs.css";
 import MapDirections from "../components/MapDirections"
+import Fade from 'react-reveal/Fade';
+
 
 class ContactForm extends Component {
 	constructor() {
@@ -169,8 +171,11 @@ class ContactForm extends Component {
 		return (
 			<div className="contact-page">
 				{/* info with directions */}
-				<MapDirections/>
+				<Fade left>
+					<MapDirections/>
+				</Fade>
 				{/* office hours div */}
+				<Fade right>
 				<div className="office-hours-parent container">
 					<div className="office-hours-inner">
 						<div className="office-text">
@@ -188,6 +193,8 @@ class ContactForm extends Component {
 						</div>
 					</div>
 				</div>
+				</Fade>
+				<Fade bottom>
 				<div className="contact-form">
 					<form>
 						<div className="container">
@@ -307,6 +314,8 @@ class ContactForm extends Component {
 						</div>
 					</form>
 				</div>
+				</Fade>
+
 			</div>
 		);
 	}

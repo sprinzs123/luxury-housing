@@ -6,8 +6,8 @@ import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 
 function MapDirections() {
     return (
-        <div>
-            <div className="contact-directions container">
+        <div className="container directions-parent">
+            <div className="contact-directions">
                 <ul className="contact-details">
                     <li>
                         <ul className="p-4 border-bot">
