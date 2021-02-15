@@ -46,9 +46,9 @@ export default class carousel extends Component {
                                 <img src={img1} alt=""/>
                                 <div className="banner-text">
                                     <h4>Make It Your Home</h4>
-                                    <h1>Living Begins Here</h1>
+                                    <h1 className="mb-3">Living Begins Here</h1>
                                     <Link to='/contact'>
-                                        <div className="btn-green banner-btn">CHECK AVAILABILITY</div>
+                                        <div className="btn-green-lg banner-btn">CHECK AVAILABILITY</div>
                                     </Link>
                                 </div>
                             </div>
@@ -60,7 +60,7 @@ export default class carousel extends Component {
                                     <h4>Make It Your Home</h4>
                                     <h1>Surround with the Best</h1>
                                     <Link to='/neighborhood'>
-                                        <div className="btn-green banner-btn">Style Everywhere You Look</div>
+                                        <div className="btn-green-lg banner-btn">Style Everywhere You Look</div>
                                     </Link>
                                 </div>
                             </div>
@@ -70,9 +70,9 @@ export default class carousel extends Component {
                                 <img src={img3} alt=""/>
                                 <div className="banner-text">
                                     <h4>Make It Your Home</h4>
-                                    <h1>Find Your Home Today</h1>
+                                    <h1 className="mb-3">Find Your Home Today</h1>
                                     <Link to='/amenities'>
-                                    <div className="btn-green banner-btn">Luxury for a Lifetime</div>
+                                    <div className="btn-green-lg banner-btn">Luxury for a Lifetime</div>
                                     </Link>
                                 </div>
                             </div>
@@ -85,10 +85,10 @@ export default class carousel extends Component {
                 <div className='under-carousel content'>
                     <div className='carousel-footer-parent'>
                         <div className='carousel-footer footer-1 border-right'>
-                            <Link to='/neighborhood'>
+                            <Link to='/neighborhood' >
                                 <div className="under-carousel-text">
                                     <h5>MAKE IT YOUR HOME</h5>
-                                    <h6>Surround with the Best</h6>
+                                    <h6 className="mb-3">Surround with the Best</h6>
                                 </div>
                             </Link>
                         </div>

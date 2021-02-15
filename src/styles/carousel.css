@@ -28,7 +28,7 @@
     top: 50%;
     /* right: 50%; */
     color: white;
-    padding-left: 1.5em;
+    padding-left: 10em;
     margin: auto;
 }
 
@@ -120,6 +120,12 @@
     .slick-list{
         max-height: 900px !important;
         overflow: hidden !important;
+    }
+    .banner-text{
+        padding-left: 3em;
+    }
+    .carousel-footer{
+        height: 20vh;
     }
 
 }

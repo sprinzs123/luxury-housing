@@ -35,25 +35,26 @@ function Footer() {
         <div className="container">
           <div className="row d-flex justify-content-between">
             <ul className="col-md-4">
-              <li>Logo</li>
               <li>Pet Friendly</li>
             </ul>
             <ul className="col-md-4">
               <li className="text-white pb-3">Our Address</li>
-              <li className="small-text">1432 Main Street</li>
-              <li className="small-text">(431) 292-9512</li>
+              <li className="small-text-footer">1432 Main Street</li>
+              <li className="small-text-footer">(431) 292-9512</li>
               <li><Link to='/contact' className="small-text text-grey">Contact Us</Link></li>
             </ul>
             <ul className="col-md-4md-">
               <li className="text-white pb-3">Legal</li>
-              <li className="small-text">2021 House</li>
-              <li className="small-text">All Rights Reserved</li>
+              <li className="small-text-footer">2021 House</li>
+              <li className="small-text-footer">All Rights Reserved</li>
               <li><Link to='/contact' className="small-text text-grey">Contact Us</Link></li>
-              <li className="small-text">Privacy Policy / Site Map / Share</li>
+              <li className="small-text-footer">Privacy Policy / Site Map / Share</li>
             </ul>
           </div>
           <div className="row d-flex justify-content-between mt-4">
             <div className="d-flex align-items-baseline footer-icons">
+
+
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="30"

@@ -3,6 +3,10 @@
     padding-bottom: 2em;
 }
 
+.small-text-footer{
+    font-size: .67em;
+}
+
 .footer-main{   
     background-color:#3a3947;
 }

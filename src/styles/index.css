@@ -38,6 +38,19 @@ p{
   letter-spacing: 0.13em;
 }
 
+.btn-green-lg{
+  background-color: var(--mainGreen);
+  color: #fff;
+  padding: 15px;
+  margin: 0.3em;
+  margin-left: 0;
+  display: inline;
+  border: 0;
+  font-size: 12px;
+  letter-spacing: 0.13em;
+}
+
+
 .btn-green:hover{
   cursor: pointer;
   background-color: rgb(95, 189, 0);
